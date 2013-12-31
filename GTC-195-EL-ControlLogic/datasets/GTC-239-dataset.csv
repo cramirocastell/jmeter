@@ -1,0 +1,5 @@
+payment|tel:+34600001111|214|07|BV|n/a|1.01|0|n/a|EUR|404|SVC3705|Insufficient payment method balance: Limit perTransaction exceeded|n/a|perTransaction|n/a|
+payment|tel:+34600001111|214|07|BV|n/a|1|0|n/a|EUR|201|Charged|paymentOK|n/a|perTransaction|n/a|
+payment|tel:+34600001111|214|07|BV|n/a|1.01|0|n/a|EUR|404|SVC3705|Insufficient payment method balance: Limit perTransaction exceeded|n/a|perTransaction|n/a|<EOF>
+
+Reach Transaction system Limit

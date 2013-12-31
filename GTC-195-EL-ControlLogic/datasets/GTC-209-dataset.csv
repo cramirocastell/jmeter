@@ -1,0 +1,13 @@
+payment|tel:+34600009999|214|07|BV|n/a|0.4|0|n/a|EUR|201|Charged|paymentOK|0.4|daily|n/a|
+refund|tel:+34600009999|214|07|BV|n/a|0.4|0|n/a|"EUR"|201|Refunded|paymentOK|0|daily|n/a|
+payment|tel:+34600009999|214|07|BV|n/a|0.45|0|n/a|EUR|201|Charged|paymentOK|0.45|daily|n/a|
+payment|tel:+34600008888|214|07|BV|n/a|0.4|0|n/a|EUR|201|Charged|paymentOK|0.4|daily|n/a|
+refund|tel:+34600008888|214|07|BV|n/a|null|null|n/a|null|201|Refunded|paymentOK|0|daily|n/a|
+payment|tel:+34600008888|214|07|BV|n/a|0.45|0|n/a|EUR|201|Charged|paymentOK|0.45|daily|n/a|<EOF>
+
+
+payment|acr:2d671174bf8bf7f9e284766ee97f7e3c;ncc=50210;type=Dyna60143384178|50216|directToBill|BV|n/a|0.4|0|n/a|MYR|201|Charged|paymentOK|0.4|daily|n/a|
+refund|acr:2d671174bf8bf7f9e284766ee97f7e3c;ncc=50210;type=Dyna60143384178|50216|directToBill|BV|n/a|0.4|0|n/a|MYR|201|Refunded|paymentOK|0|daily|n/a|
+payment|acr:2d671174bf8bf7f9e284766ee97f7e3c;ncc=50210;type=Dyna60143384178|50216|directToBill|BV|n/a|0.4|0|n/a|MYR|201|Charged|paymentOK|0.45|daily|n/a|<EOF>
+
+Umbral and limit reached at the same time

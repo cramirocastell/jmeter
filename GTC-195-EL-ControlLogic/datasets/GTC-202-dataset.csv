@@ -1,0 +1,5 @@
+payment|tel:+447738874131|234|11|BV|n/a|0.1|0.01|n/a|GBP|404|SVC3705|Insufficient payment method balance: Limit daily exceeded|0|daily|n/a|
+payment|tel:+4917670715230|262|07|BV|n/a|0.1|0.01|n/a|EUR|201|Charged|paymentOK|0.11|daily|n/a|<EOF>
+
+Pasar manualmente para intermediación indirecta, ir cambiando OBcode y countryCode en variables de entorno del .jmx
+Reach limit just for a specific OB-Country-Currency

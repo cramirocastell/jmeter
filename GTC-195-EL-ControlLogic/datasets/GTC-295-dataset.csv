@@ -1,0 +1,11 @@
+payment|tel:+34600004444|214|07|BV|12505|n/a|n/a|n/a|EUR|201|Charged|paymentOK|0.75|daily|n/a|
+payment|tel:+34600004444|214|07|BV|12507|n/a|n/a|n/a|EUR|404|SVC3705|Insufficient payment method balance: Limit daily exceeded|0.75|daily|n/a|<EOF>
+
+
+payment|tel:+541140785461|732|123|BV|12302|n/a|n/a|n/a|COP|201|Charged|paymentOK|1293|daily|n/a|
+payment|tel:+541140785461|732|123|BV|12303|n/a|n/a|n/a|COP|404|SVC3705|Insufficient payment method balance: Limit daily exceeded|1293|daily|n/a|<EOF>
+
+Reach limit paying in pricepoints mode
+
+payment|tel:+34600000011|234|11|Google|BV|3201|0.42|0.08|GBP|201||jmeter-payment|0.5|daily|${TX_NOTIFICATIONS_1}|
+payment|tel:+34600000011|234|11|Google|BV|3205|1.25|0.25|GBP|404|SVC3705|Insufficient payment method balance: Limit daily exceeded|0.5|daily|${TX_NOTIFICATIONS_1}|<EOF>

@@ -1,0 +1,5 @@
+payment|tel:+34600000444|214|07|BV|n/a|5|0|n/a|EUR|404|SVC3705|Insufficient payment method balance: Limit perTransaction exceeded|n/a|perTransaction|n/a|
+payment|tel:+34600000444|214|07|BV|n/a|4|0|n/a|EUR|404|SVC3705|Insufficient payment method balance: Limit monthly exceeded|0|monthly|n/a|
+payment|tel:+34600000444|214|07|BV|n/a|3|0|n/a|EUR|404|SVC3705|Insufficient payment method balance: Limit weekly exceeded|0|weekly|n/a|
+payment|tel:+34600000444|214|07|BV|n/a|2|0|n/a|EUR|404|SVC3705|Insufficient payment method balance: Limit daily exceeded|0|daily|n/a|
+payment|tel:+34600000444|214|07|BV|n/a|1|0|n/a|EUR|201|201|Charged|1|monthly|n/a|<EOF>

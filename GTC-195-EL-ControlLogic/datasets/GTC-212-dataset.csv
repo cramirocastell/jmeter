@@ -1,0 +1,5 @@
+payment|tel:+34600002222|214|07|BV|n/a|3.10|n/a|n/a|EUR|201|Charged|paymentOK|3.1|monthly|[3]|
+payment|tel:+34600003333|214|07|BV|n/a|4.20|n/a|n/a|EUR|201|Charged|paymentOK|4.2|weekly|[4]|
+payment|tel:+34600004444|214|07|BV|n/a|3.30|n/a|n/a|EUR|201|Charged|paymentOK|3.3|daily|[3]|<EOF>
+
+Reset time limit when Next Period start is reached

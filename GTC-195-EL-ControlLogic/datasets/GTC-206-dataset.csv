@@ -1,0 +1,5 @@
+payment|tel:+34600004444|214|07|BV|n/a|8.5|0|n/a|EUR|201|Charged|paymentOK|8.5|daily|[8]|
+payment|tel:+34600004444|214|07|BV|n/a|1|0|n/a|EUR|201|Charged|paymentOK|9.5|daily|[8,9.1]|
+payment|tel:+34600005555|214|07|BV|n/a|9.1|0|n/a|EUR|201|Charged|paymentOK|9.1|daily|[9.1]|<EOF>
+
+Several umbrals of the same rule reached at the same time 

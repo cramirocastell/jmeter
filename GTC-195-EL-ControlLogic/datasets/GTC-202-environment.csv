@@ -1,0 +1,4 @@
+BV|noUserId|dummy provider|GBP|daily|O2|GB|0.1|null|
+BV|noUserId|dummy provider|EUR|daily|O2|DE|0.2|null|<EOF>
+
+Reach limit just for a specific OB-Country-Currency

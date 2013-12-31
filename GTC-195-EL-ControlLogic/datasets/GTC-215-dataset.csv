@@ -1,0 +1,4 @@
+payment|tel:+34600006666|214|07|BV|n/a|8.46|0|n/a|EUR|201|Charged|paymentOK|8.46|daily|[8.40,8.45]|
+payment|tel:+34600007777|214|07|BV|n/a|9.6|0|n/a|EUR|201|Charged|paymentOK|9.6|daily|[9.1]|<EOF>
+
+Several umbrals of different rules reached at the same time

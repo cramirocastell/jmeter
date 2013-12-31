@@ -1,0 +1,8 @@
+payment|tel:+447738874131|234|11|BV|n/a|0.8|0.3|n/a|GBP|404|SVC3705|Insufficient payment method balance: Limit weekly exceeded|0|weekly|n/a|
+payment|tel:+447738874131|234|11|BV|n/a|1|0.01|n/a|GBP|404|SVC3705|Insufficient payment method balance: Limit weekly exceeded|0|weekly|n/a|
+payment|tel:+447738874131|234|11|BV|n/a|0.9|0|n/a|GBP|201|Charged|paymentOK|0.9|weekly|n/a|
+payment|tel:+447738874131|234|11|BV|n/a|0.1|0.01|n/a|GBP|404|SVC3705|Insufficient payment method balance: Limit weekly exceeded|0.9|weekly|n/a|<EOF>
+
+payment|tel:+4917670715230|262|07|Google|BV|n/a|0.8|0.3|n/a|EUR|404|SVC3705|Insufficient payment method balance: Limit weekly exceeded|0|weekly|n/a|<EOF>
+payment|tel:+4917670715230|262|07|Google|BV|n/a|1|0.01|n/a|EUR|404|SVC3705|Insufficient payment method balance: Limit weekly exceeded|0|weekly|n/a|
+payment|tel:+4917670715230|262|07|Google|BV|n/a|1.01|0.1|n/a|EUR|201||jmeter-payment|1.11|weekly|n/a|<EOF>

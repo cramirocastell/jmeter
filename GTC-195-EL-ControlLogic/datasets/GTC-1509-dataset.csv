@@ -1,0 +1,4 @@
+payment|tel:+34600001133|214|07|BV|n/a|2.5|0|n/a|EUR|201|Charged|paymentOK|2.5|daily|n/a|
+payment|tel:+34600001133|214|07|BV|n/a|2.5|0|n/a|EUR|201|Charged|paymentOK|5|daily|n/a|
+payment|tel:+34600001133|214|07|BV|n/a|0.01|0|n/a|EUR|404|SVC3705|Insufficient payment method balance: Limit daily exceeded|5|daily|n/a|
+payment|tel:+34600001133|214|07|BV|n/a|0.01|0|n/a|EUR|404|SVC3705|Insufficient payment method balance: Limit daily exceeded|5|daily|n/a|<EOF>

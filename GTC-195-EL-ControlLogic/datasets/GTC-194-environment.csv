@@ -1,0 +1,4 @@
+BV|tel:+34600000444|testTrusted@mailinator.com|EUR|perTransaction|MOVISTAR|ES|4|null|
+BV|tel:+34600000444|dummy provider|EUR|monthly|MOVISTAR|ES|3|null|
+BV|noUserId|testTrusted@mailinator.com|EUR|weekly|MOVISTAR|ES|2|null|
+BV|noUserId|dummy provider|EUR|daily|MOVISTAR|ES|1|null|<EOF>

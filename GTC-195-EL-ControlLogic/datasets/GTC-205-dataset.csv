@@ -1,0 +1,5 @@
+payment|tel:+34600004444|214|07|BV|n/a|2|0|n/a|EUR|201|Charged|paymentOK|2|daily|[2]|
+payment|tel:+34600003333|214|07|BV|n/a|1.41|0|n/a|EUR|201|Charged|paymentOK|1.41|daily|[1.40]|
+payment|tel:+34600002222|214|07|BV|n/a|1.99|0|n/a|EUR|201|Charged|paymentOK|1.99|daily|n/a|<EOF>
+
+Reach a specific umbral

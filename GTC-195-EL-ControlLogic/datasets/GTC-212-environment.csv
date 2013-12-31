@@ -1,0 +1,5 @@
+BV|tel:+34600002222|dummy provider|EUR|monthly|MOVISTAR|ES|5|"3,4"|
+BV|tel:+34600003333|dummy provider|EUR|weekly|MOVISTAR|ES|5|"3,4"|
+BV|tel:+34600004444|dummy provider|EUR|daily|MOVISTAR|ES|5|"3,4"|<EOF>
+
+Reset time limit when Next Period start is reached

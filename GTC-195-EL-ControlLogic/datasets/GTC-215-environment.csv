@@ -1,0 +1,5 @@
+BV|tel:+34600006666|dummy provider|EUR|daily|MOVISTAR|ES|10|8.40|
+BV|tel:+34600007777|dummy provider|EUR|daily|MOVISTAR|ES|10|9.1|
+BV|noUserId|dummy provider|EUR|daily|MOVISTAR|ES|10|"8.45,9"|<EOF>
+
+Several umbrals of different rules reached at the same time

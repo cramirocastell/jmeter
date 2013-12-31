@@ -1,0 +1,2505 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="2.5" jmeter="2.10 r1533061">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Plan de Pruebas" enabled="true">
+      <stringProp name="TestPlan.comments">Prerequisitos
+Tener providers de (Google, Microsoft, Nokia, RIM) provisionados
+insert into DBE_APPPROVIDER (TX_APPPROVIDER_ID,TX_NAME) VALUES (4,&apos;RIM&apos;);</stringProp>
+      <boolProp name="TestPlan.functional_mode">true</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="Variables definidas por el Usuario" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="Local data" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="BASEDIR" elementType="Argument">
+            <stringProp name="Argument.name">BASEDIR</stringProp>
+            <stringProp name="Argument.value">\datasets\</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">Relative path to the test datasets</stringProp>
+          </elementProp>
+          <elementProp name="TC" elementType="Argument">
+            <stringProp name="Argument.name">TC</stringProp>
+            <stringProp name="Argument.value">GTC-191</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">Test Case to be executed</stringProp>
+          </elementProp>
+        </collectionProp>
+        <stringProp name="TestPlan.comments">GTC-191,GTC-192,GTC-193,GTC-194,GTC-196,GTC-200,GTC-202,GTC-206,GTC-207,GTC-212,GTC-215,GTC-239,GTC-237,GTC-317,GTC-1508,GTC-1509,GTC-1510,GTC-1513,GTC-462,GTC-209
+GTC-205,GTC-295</stringProp>
+      </Arguments>
+      <hashTree/>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="LOCALHOST" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="whitebox-ddbb" elementType="Argument">
+            <stringProp name="Argument.name">whitebox-ddbb</stringProp>
+            <stringProp name="Argument.value">true</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">Indicate if DDBB checks will be done (true) or not (false)</stringProp>
+          </elementProp>
+          <elementProp name="whitebox-log" elementType="Argument">
+            <stringProp name="Argument.name">whitebox-log</stringProp>
+            <stringProp name="Argument.value">true</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">Indicate if LOG checks will be done (true) or not (false)</stringProp>
+          </elementProp>
+          <elementProp name="applicationId" elementType="Argument">
+            <stringProp name="Argument.name">applicationId</stringProp>
+            <stringProp name="Argument.value">20298</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">appid-eBC=&quot;20445&quot; / appid-Cashlog=&quot;50029&quot;</stringProp>
+          </elementProp>
+          <elementProp name="appProvider" elementType="Argument">
+            <stringProp name="Argument.name">appProvider</stringProp>
+            <stringProp name="Argument.value">testTrusted@mailinator.com</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">20298,20310,20318</stringProp>
+          </elementProp>
+          <elementProp name="appProvider2" elementType="Argument">
+            <stringProp name="Argument.name">appProvider2</stringProp>
+            <stringProp name="Argument.value">testTrusted_01@mailinator.com</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">41949</stringProp>
+          </elementProp>
+          <elementProp name="productId" elementType="Argument">
+            <stringProp name="Argument.name">productId</stringProp>
+            <stringProp name="Argument.value">1</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="tomcat-server" elementType="Argument">
+            <stringProp name="Argument.name">tomcat-server</stringProp>
+            <stringProp name="Argument.value">localhost</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="tomcat-port" elementType="Argument">
+            <stringProp name="Argument.name">tomcat-port</stringProp>
+            <stringProp name="Argument.value">8080</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="database-server" elementType="Argument">
+            <stringProp name="Argument.name">database-server</stringProp>
+            <stringProp name="Argument.value">localhost</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="database-port" elementType="Argument">
+            <stringProp name="Argument.name">database-port</stringProp>
+            <stringProp name="Argument.value">1521</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="database-service" elementType="Argument">
+            <stringProp name="Argument.name">database-service</stringProp>
+            <stringProp name="Argument.value">XE</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="database-user" elementType="Argument">
+            <stringProp name="Argument.name">database-user</stringProp>
+            <stringProp name="Argument.value">pe</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="cgi-path" elementType="Argument">
+            <stringProp name="Argument.name">cgi-path</stringProp>
+            <stringProp name="Argument.value">cgi-bin/main.cgi</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="cgi-port" elementType="Argument">
+            <stringProp name="Argument.name">cgi-port</stringProp>
+            <stringProp name="Argument.value">6666</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="log-file" elementType="Argument">
+            <stringProp name="Argument.name">log-file</stringProp>
+            <stringProp name="Argument.value">main.log</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </Arguments>
+      <hashTree/>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="QA" enabled="false">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="whitebox-ddbb" elementType="Argument">
+            <stringProp name="Argument.name">whitebox-ddbb</stringProp>
+            <stringProp name="Argument.value">true</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="whitebox-log" elementType="Argument">
+            <stringProp name="Argument.name">whitebox-log</stringProp>
+            <stringProp name="Argument.value">false</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="applicationId" elementType="Argument">
+            <stringProp name="Argument.name">applicationId</stringProp>
+            <stringProp name="Argument.value">11111</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="appProvider" elementType="Argument">
+            <stringProp name="Argument.name">appProvider</stringProp>
+            <stringProp name="Argument.value"></stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="appProvider2" elementType="Argument">
+            <stringProp name="Argument.name">appProvider2</stringProp>
+            <stringProp name="Argument.value"></stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="productId" elementType="Argument">
+            <stringProp name="Argument.name">productId</stringProp>
+            <stringProp name="Argument.value">1</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="tomcat-server" elementType="Argument">
+            <stringProp name="Argument.name">tomcat-server</stringProp>
+            <stringProp name="Argument.value">pe-qa-be.hi.inet</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="tomcat-port" elementType="Argument">
+            <stringProp name="Argument.name">tomcat-port</stringProp>
+            <stringProp name="Argument.value">8080</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="database-server" elementType="Argument">
+            <stringProp name="Argument.name">database-server</stringProp>
+            <stringProp name="Argument.value">racpro-scan.hi.inet</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="database-port" elementType="Argument">
+            <stringProp name="Argument.name">database-port</stringProp>
+            <stringProp name="Argument.value">1521</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="database-service" elementType="Argument">
+            <stringProp name="Argument.name">database-service</stringProp>
+            <stringProp name="Argument.value">RACPRE</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="database-user" elementType="Argument">
+            <stringProp name="Argument.name">database-user</stringProp>
+            <stringProp name="Argument.value">PE_QA</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="cgi-path" elementType="Argument">
+            <stringProp name="Argument.name">cgi-path</stringProp>
+            <stringProp name="Argument.value">cgi-bin/log.cgi</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="cgi-port" elementType="Argument">
+            <stringProp name="Argument.name">cgi-port</stringProp>
+            <stringProp name="Argument.value">6666</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="log-file" elementType="Argument">
+            <stringProp name="Argument.name">log-file</stringProp>
+            <stringProp name="Argument.value">log.log</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </Arguments>
+      <hashTree/>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="QAINT" enabled="false">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="whitebox-ddbb" elementType="Argument">
+            <stringProp name="Argument.name">whitebox-ddbb</stringProp>
+            <stringProp name="Argument.value">true</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">Indicate if DDBB checks will be done (true) or not (false)</stringProp>
+          </elementProp>
+          <elementProp name="whitebox-log" elementType="Argument">
+            <stringProp name="Argument.name">whitebox-log</stringProp>
+            <stringProp name="Argument.value">true</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">Indicate if LOG checks will be done (true) or not (false)</stringProp>
+          </elementProp>
+          <elementProp name="applicationId" elementType="Argument">
+            <stringProp name="Argument.name">applicationId</stringProp>
+            <stringProp name="Argument.value">20298</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">appid-eBC=&quot;20445&quot; / appid-Cashlog=&quot;50029&quot;</stringProp>
+          </elementProp>
+          <elementProp name="appProvider" elementType="Argument">
+            <stringProp name="Argument.name">appProvider</stringProp>
+            <stringProp name="Argument.value">testTrusted@mailinator.com</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">20298,20310,20318</stringProp>
+          </elementProp>
+          <elementProp name="appProvider2" elementType="Argument">
+            <stringProp name="Argument.name">appProvider2</stringProp>
+            <stringProp name="Argument.value">testTrusted_01@mailinator.com</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">41949</stringProp>
+          </elementProp>
+          <elementProp name="productId" elementType="Argument">
+            <stringProp name="Argument.name">productId</stringProp>
+            <stringProp name="Argument.value">1</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="tomcat-server" elementType="Argument">
+            <stringProp name="Argument.name">tomcat-server</stringProp>
+            <stringProp name="Argument.value">pe-qaint-be.hi.inet</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="tomcat-port" elementType="Argument">
+            <stringProp name="Argument.name">tomcat-port</stringProp>
+            <stringProp name="Argument.value">8080</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="database-server" elementType="Argument">
+            <stringProp name="Argument.name">database-server</stringProp>
+            <stringProp name="Argument.value">racpro-scan.hi.inet</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="database-port" elementType="Argument">
+            <stringProp name="Argument.name">database-port</stringProp>
+            <stringProp name="Argument.value">1521</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="database-service" elementType="Argument">
+            <stringProp name="Argument.name">database-service</stringProp>
+            <stringProp name="Argument.value">RACPRE</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="database-user" elementType="Argument">
+            <stringProp name="Argument.name">database-user</stringProp>
+            <stringProp name="Argument.value">PE_QAINT</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="cgi-path" elementType="Argument">
+            <stringProp name="Argument.name">cgi-path</stringProp>
+            <stringProp name="Argument.value">cgi-bin/main.cgi</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="cgi-port" elementType="Argument">
+            <stringProp name="Argument.name">cgi-port</stringProp>
+            <stringProp name="Argument.value">6666</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="log-file" elementType="Argument">
+            <stringProp name="Argument.name">log-file</stringProp>
+            <stringProp name="Argument.value">main.log</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </Arguments>
+      <hashTree/>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="NV" enabled="false">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="whitebox-ddbb" elementType="Argument">
+            <stringProp name="Argument.name">whitebox-ddbb</stringProp>
+            <stringProp name="Argument.value">true</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="whitebox-log" elementType="Argument">
+            <stringProp name="Argument.name">whitebox-log</stringProp>
+            <stringProp name="Argument.value">false</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="applicationId" elementType="Argument">
+            <stringProp name="Argument.name">applicationId</stringProp>
+            <stringProp name="Argument.value">11111</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="appProvider" elementType="Argument">
+            <stringProp name="Argument.name">appProvider</stringProp>
+            <stringProp name="Argument.value"></stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="appProvider2" elementType="Argument">
+            <stringProp name="Argument.name">appProvider2</stringProp>
+            <stringProp name="Argument.value"></stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="productId" elementType="Argument">
+            <stringProp name="Argument.name">productId</stringProp>
+            <stringProp name="Argument.value">1</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="tomcat-server" elementType="Argument">
+            <stringProp name="Argument.name">tomcat-server</stringProp>
+            <stringProp name="Argument.value">172.18.179.72</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="tomcat-port" elementType="Argument">
+            <stringProp name="Argument.name">tomcat-port</stringProp>
+            <stringProp name="Argument.value">8080</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="database-server" elementType="Argument">
+            <stringProp name="Argument.name">database-server</stringProp>
+            <stringProp name="Argument.value">localhost</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="database-port" elementType="Argument">
+            <stringProp name="Argument.name">database-port</stringProp>
+            <stringProp name="Argument.value">51525</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="database-service" elementType="Argument">
+            <stringProp name="Argument.name">database-service</stringProp>
+            <stringProp name="Argument.value">DBE</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="database-user" elementType="Argument">
+            <stringProp name="Argument.name">database-user</stringProp>
+            <stringProp name="Argument.value">dbe</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="cgi-path" elementType="Argument">
+            <stringProp name="Argument.name">cgi-path</stringProp>
+            <stringProp name="Argument.value">cgi-bin/log.cgi</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="cgi-port" elementType="Argument">
+            <stringProp name="Argument.name">cgi-port</stringProp>
+            <stringProp name="Argument.value">6666</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="log-file" elementType="Argument">
+            <stringProp name="Argument.name">log-file</stringProp>
+            <stringProp name="Argument.value">log.log</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </Arguments>
+      <hashTree/>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="MIRROR" enabled="false">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="whitebox-ddbb" elementType="Argument">
+            <stringProp name="Argument.name">whitebox-ddbb</stringProp>
+            <stringProp name="Argument.value">true</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="whitebox-log" elementType="Argument">
+            <stringProp name="Argument.name">whitebox-log</stringProp>
+            <stringProp name="Argument.value">false</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="applicationId" elementType="Argument">
+            <stringProp name="Argument.name">applicationId</stringProp>
+            <stringProp name="Argument.value">11111</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="appProvider" elementType="Argument">
+            <stringProp name="Argument.name">appProvider</stringProp>
+            <stringProp name="Argument.value"></stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="appProvider2" elementType="Argument">
+            <stringProp name="Argument.name">appProvider2</stringProp>
+            <stringProp name="Argument.value"></stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="productId" elementType="Argument">
+            <stringProp name="Argument.name">productId</stringProp>
+            <stringProp name="Argument.value">1</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="tomcat-server" elementType="Argument">
+            <stringProp name="Argument.name">tomcat-server</stringProp>
+            <stringProp name="Argument.value">172.18.179.75</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="tomcat-port" elementType="Argument">
+            <stringProp name="Argument.name">tomcat-port</stringProp>
+            <stringProp name="Argument.value">8080</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="database-server" elementType="Argument">
+            <stringProp name="Argument.name">database-server</stringProp>
+            <stringProp name="Argument.value">localhost</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="database-port" elementType="Argument">
+            <stringProp name="Argument.name">database-port</stringProp>
+            <stringProp name="Argument.value">51525</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="database-service" elementType="Argument">
+            <stringProp name="Argument.name">database-service</stringProp>
+            <stringProp name="Argument.value">DBE</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="database-user" elementType="Argument">
+            <stringProp name="Argument.name">database-user</stringProp>
+            <stringProp name="Argument.value">dbe_mr</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="cgi-path" elementType="Argument">
+            <stringProp name="Argument.name">cgi-path</stringProp>
+            <stringProp name="Argument.value">cgi-bin/log.cgi</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="cgi-port" elementType="Argument">
+            <stringProp name="Argument.name">cgi-port</stringProp>
+            <stringProp name="Argument.value">6666</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="log-file" elementType="Argument">
+            <stringProp name="Argument.name">log-file</stringProp>
+            <stringProp name="Argument.value">log.log</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </Arguments>
+      <hashTree/>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="CLON-MIRROR" enabled="false">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="whitebox-ddbb" elementType="Argument">
+            <stringProp name="Argument.name">whitebox-ddbb</stringProp>
+            <stringProp name="Argument.value">true</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="whitebox-log" elementType="Argument">
+            <stringProp name="Argument.name">whitebox-log</stringProp>
+            <stringProp name="Argument.value">false</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="applicationId" elementType="Argument">
+            <stringProp name="Argument.name">applicationId</stringProp>
+            <stringProp name="Argument.value">11111</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="appProvider" elementType="Argument">
+            <stringProp name="Argument.name">appProvider</stringProp>
+            <stringProp name="Argument.value"></stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="appProvider2" elementType="Argument">
+            <stringProp name="Argument.name">appProvider2</stringProp>
+            <stringProp name="Argument.value"></stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="productId" elementType="Argument">
+            <stringProp name="Argument.name">productId</stringProp>
+            <stringProp name="Argument.value">1</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="tomcat-server" elementType="Argument">
+            <stringProp name="Argument.name">tomcat-server</stringProp>
+            <stringProp name="Argument.value">pe-clonmirror-be.hi.inet</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="tomcat-port" elementType="Argument">
+            <stringProp name="Argument.name">tomcat-port</stringProp>
+            <stringProp name="Argument.value">8080</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="database-server" elementType="Argument">
+            <stringProp name="Argument.name">database-server</stringProp>
+            <stringProp name="Argument.value">racpro-scan.hi.inet</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="database-port" elementType="Argument">
+            <stringProp name="Argument.name">database-port</stringProp>
+            <stringProp name="Argument.value">1521</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="database-service" elementType="Argument">
+            <stringProp name="Argument.name">database-service</stringProp>
+            <stringProp name="Argument.value">RACPRE</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="database-user" elementType="Argument">
+            <stringProp name="Argument.name">database-user</stringProp>
+            <stringProp name="Argument.value">PE_CLONMIRROR</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="cgi-path" elementType="Argument">
+            <stringProp name="Argument.name">cgi-path</stringProp>
+            <stringProp name="Argument.value">cgi-bin/log.cgi</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="cgi-port" elementType="Argument">
+            <stringProp name="Argument.name">cgi-port</stringProp>
+            <stringProp name="Argument.value">6666</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="log-file" elementType="Argument">
+            <stringProp name="Argument.name">log-file</stringProp>
+            <stringProp name="Argument.value">log.log</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </Arguments>
+      <hashTree/>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="DSN-MIRROR" enabled="false">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="whitebox-ddbb" elementType="Argument">
+            <stringProp name="Argument.name">whitebox-ddbb</stringProp>
+            <stringProp name="Argument.value">true</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="whitebox-log" elementType="Argument">
+            <stringProp name="Argument.name">whitebox-log</stringProp>
+            <stringProp name="Argument.value">true</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="applicationId" elementType="Argument">
+            <stringProp name="Argument.name">applicationId</stringProp>
+            <stringProp name="Argument.value">20445</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">appid-eBC=&quot;20445&quot; / appid-Cashlog=&quot;50029&quot;</stringProp>
+          </elementProp>
+          <elementProp name="appProvider" elementType="Argument">
+            <stringProp name="Argument.name">appProvider</stringProp>
+            <stringProp name="Argument.value">20032</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">appProviderId-eBC=&quot;20032&quot; / appProviderId-Cashlog=&quot;50098&quot;</stringProp>
+          </elementProp>
+          <elementProp name="appProvider2" elementType="Argument">
+            <stringProp name="Argument.name">appProvider2</stringProp>
+            <stringProp name="Argument.value"></stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="productId" elementType="Argument">
+            <stringProp name="Argument.name">productId</stringProp>
+            <stringProp name="Argument.value">1</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="tomcat-server" elementType="Argument">
+            <stringProp name="Argument.name">tomcat-server</stringProp>
+            <stringProp name="Argument.value">pe-qaint-be.hi.inet</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="tomcat-port" elementType="Argument">
+            <stringProp name="Argument.name">tomcat-port</stringProp>
+            <stringProp name="Argument.value">8080</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="database-server" elementType="Argument">
+            <stringProp name="Argument.name">database-server</stringProp>
+            <stringProp name="Argument.value">racpro-scan.hi.inet</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="database-port" elementType="Argument">
+            <stringProp name="Argument.name">database-port</stringProp>
+            <stringProp name="Argument.value">1521</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="database-service" elementType="Argument">
+            <stringProp name="Argument.name">database-service</stringProp>
+            <stringProp name="Argument.value">RACPRE</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="database-user" elementType="Argument">
+            <stringProp name="Argument.name">database-user</stringProp>
+            <stringProp name="Argument.value">PE_QAINT</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="cgi-path" elementType="Argument">
+            <stringProp name="Argument.name">cgi-path</stringProp>
+            <stringProp name="Argument.value">cgi-bin/log.cgi</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="cgi-port" elementType="Argument">
+            <stringProp name="Argument.name">cgi-port</stringProp>
+            <stringProp name="Argument.value">6666</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="log-file" elementType="Argument">
+            <stringProp name="Argument.name">log-file</stringProp>
+            <stringProp name="Argument.value">log.log</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </Arguments>
+      <hashTree/>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="jira-integration" enabled="false">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="jiraEnabled" elementType="Argument">
+            <stringProp name="Argument.name">jiraEnabled</stringProp>
+            <stringProp name="Argument.value">false</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">TRUE: Change status of execution in JIRA   FALSE: Do not change status of execution in JIRA</stringProp>
+          </elementProp>
+          <elementProp name="changeJiraStatus" elementType="Argument">
+            <stringProp name="Argument.name">changeJiraStatus</stringProp>
+            <stringProp name="Argument.value">false</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">Estado de la ejecución (Pass, Fail o Block)</stringProp>
+          </elementProp>
+          <elementProp name="jiraOnlyIfStatusChanges" elementType="Argument">
+            <stringProp name="Argument.name">jiraOnlyIfStatusChanges</stringProp>
+            <stringProp name="Argument.value">true</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">TRUE: Crea una nueva ejecución sólo si el estado ha cambiado respecto a la última ejecución. FALSE: Crea una nueva ejecución independientemente del estado anterior. </stringProp>
+          </elementProp>
+          <elementProp name="jiraVersion" elementType="Argument">
+            <stringProp name="Argument.name">jiraVersion</stringProp>
+            <stringProp name="Argument.value">Release 2_3</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="jiraBuild" elementType="Argument">
+            <stringProp name="Argument.name">jiraBuild</stringProp>
+            <stringProp name="Argument.value"></stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="jiraLabels" elementType="Argument">
+            <stringProp name="Argument.name">jiraLabels</stringProp>
+            <stringProp name="Argument.value">qaint</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="jiraComment" elementType="Argument">
+            <stringProp name="Argument.name">jiraComment</stringProp>
+            <stringProp name="Argument.value"></stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </Arguments>
+      <hashTree/>
+      <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="Tomcat Connection" enabled="true">
+        <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="Variables definidas por el Usuario" enabled="true">
+          <collectionProp name="Arguments.arguments"/>
+        </elementProp>
+        <stringProp name="HTTPSampler.domain">${tomcat-server}</stringProp>
+        <stringProp name="HTTPSampler.port">${tomcat-port}</stringProp>
+        <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+        <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        <stringProp name="HTTPSampler.protocol"></stringProp>
+        <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+        <stringProp name="HTTPSampler.path"></stringProp>
+        <stringProp name="HTTPSampler.concurrentPool">4</stringProp>
+      </ConfigTestElement>
+      <hashTree/>
+      <JDBCDataSource guiclass="TestBeanGUI" testclass="JDBCDataSource" testname="DDBB Connection" enabled="true">
+        <boolProp name="autocommit">true</boolProp>
+        <stringProp name="checkQuery">Select 1</stringProp>
+        <stringProp name="connectionAge">5000</stringProp>
+        <stringProp name="dataSource">pool</stringProp>
+        <stringProp name="dbUrl">jdbc:oracle:thin:@//${database-server}:${database-port}/${database-service}</stringProp>
+        <stringProp name="driver">oracle.jdbc.OracleDriver</stringProp>
+        <boolProp name="keepAlive">true</boolProp>
+        <stringProp name="password">pe</stringProp>
+        <stringProp name="poolMax">1</stringProp>
+        <stringProp name="timeout">10000</stringProp>
+        <stringProp name="transactionIsolation">DEFAULT</stringProp>
+        <stringProp name="trimInterval">60000</stringProp>
+        <stringProp name="username">${database-user}</stringProp>
+      </JDBCDataSource>
+      <hashTree/>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Expenditure Limits Test Suite" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Controlador Bucle" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <longProp name="ThreadGroup.start_time">1367162127000</longProp>
+        <longProp name="ThreadGroup.end_time">1367162127000</longProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <stringProp name="TestPlan.comments">PaymentMethod y UserId determinan el tipo de pago y el conector usado
+Control de gastos está pensado con amounts, ¿pricepoints?</stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <WhileController guiclass="WhileControllerGui" testclass="WhileController" testname="1. SetUp" enabled="true">
+          <stringProp name="WhileController.condition">${__javaScript(&quot;${endProfiles}&quot; != &quot;&lt;EOF&gt;&quot;)}</stringProp>
+        </WhileController>
+        <hashTree>
+          <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="Jira Issue Key - ${TC}" enabled="true">
+            <stringProp name="BeanShellSampler.query">vars.put(&quot;jiraTestCaseId&quot;, &quot;${TC}&quot;);
+
+// don&apos;t modify
+vars.put(&quot;jiraStatus&quot;, &quot;Pass&quot;);
+
+
+</stringProp>
+            <stringProp name="BeanShellSampler.filename"></stringProp>
+            <stringProp name="BeanShellSampler.parameters"></stringProp>
+            <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+          </BeanShellSampler>
+          <hashTree/>
+          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="environment.csv" enabled="true">
+            <stringProp name="filename">${BASEDIR}${TC}-environment.csv</stringProp>
+            <stringProp name="fileEncoding"></stringProp>
+            <stringProp name="variableNames">service,userId,provider,currency,ELtype,OB,country,maxAmount,notifAmounts,endProfiles</stringProp>
+            <stringProp name="delimiter">|</stringProp>
+            <boolProp name="quotedData">false</boolProp>
+            <boolProp name="recycle">false</boolProp>
+            <boolProp name="stopThread">false</boolProp>
+            <stringProp name="shareMode">shareMode.group</stringProp>
+          </CSVDataSet>
+          <hashTree/>
+          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Environment Adjustments" enabled="true"/>
+          <hashTree>
+            <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="${TC} env" enabled="true">
+              <stringProp name="dataSource">pool</stringProp>
+              <stringProp name="queryType">Select Statement</stringProp>
+              <stringProp name="query">SELECT  NU_SERVICE_ID FROM BM_SERVICE WHERE TX_NAME=&apos;${service}&apos;
+</stringProp>
+              <stringProp name="queryArguments"></stringProp>
+              <stringProp name="queryArgumentsTypes"></stringProp>
+              <stringProp name="variableNames">nuServiceId</stringProp>
+              <stringProp name="resultVariable"></stringProp>
+              <stringProp name="TestPlan.comments">NU_SERVICE_ID</stringProp>
+              <stringProp name="queryTimeout"></stringProp>
+            </JDBCSampler>
+            <hashTree/>
+            <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="${TC} env" enabled="true">
+              <stringProp name="dataSource">pool</stringProp>
+              <stringProp name="queryType">Select Statement</stringProp>
+              <stringProp name="query">SELECT  TX_APPPROVIDER_ID FROM DBE_APPPROVIDER WHERE TX_NAME=&apos;${provider}&apos;
+</stringProp>
+              <stringProp name="queryArguments"></stringProp>
+              <stringProp name="queryArgumentsTypes"></stringProp>
+              <stringProp name="variableNames">providerId</stringProp>
+              <stringProp name="resultVariable"></stringProp>
+              <stringProp name="TestPlan.comments">TX_APPPROVIDER_ID</stringProp>
+              <stringProp name="queryTimeout"></stringProp>
+            </JDBCSampler>
+            <hashTree/>
+            <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="${TC} env" enabled="true">
+              <stringProp name="dataSource">pool</stringProp>
+              <stringProp name="queryType">Select Statement</stringProp>
+              <stringProp name="query">SELECT NU_CURRENCY_ID FROM BM_CURRENCY WHERE TX_ISO4217_CODE=&apos;${currency}&apos;</stringProp>
+              <stringProp name="queryArguments"></stringProp>
+              <stringProp name="queryArgumentsTypes"></stringProp>
+              <stringProp name="variableNames">currencyId</stringProp>
+              <stringProp name="resultVariable"></stringProp>
+              <stringProp name="TestPlan.comments">NU_CURRENCY_ID</stringProp>
+              <stringProp name="queryTimeout"></stringProp>
+            </JDBCSampler>
+            <hashTree/>
+            <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="${TC} env" enabled="true">
+              <stringProp name="dataSource">pool</stringProp>
+              <stringProp name="queryType">Select Statement</stringProp>
+              <stringProp name="query">SELECT NU_OB_ID  FROM BM_OB WHERE TX_NAME=&apos;${OB}&apos;
+</stringProp>
+              <stringProp name="queryArguments"></stringProp>
+              <stringProp name="queryArgumentsTypes"></stringProp>
+              <stringProp name="variableNames">OBId</stringProp>
+              <stringProp name="resultVariable"></stringProp>
+              <stringProp name="TestPlan.comments">NU_OB_ID</stringProp>
+              <stringProp name="queryTimeout"></stringProp>
+            </JDBCSampler>
+            <hashTree/>
+            <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="${TC} env" enabled="true">
+              <stringProp name="dataSource">pool</stringProp>
+              <stringProp name="queryType">Select Statement</stringProp>
+              <stringProp name="query">SELECT  NU_COUNTRY_ID FROM BM_COUNTRY WHERE TX_ISO3166_CODE=&apos;${country}&apos;
+</stringProp>
+              <stringProp name="queryArguments"></stringProp>
+              <stringProp name="queryArgumentsTypes"></stringProp>
+              <stringProp name="variableNames">countryId</stringProp>
+              <stringProp name="resultVariable"></stringProp>
+              <stringProp name="TestPlan.comments">NU_COUNTRY_ID</stringProp>
+              <stringProp name="queryTimeout"></stringProp>
+            </JDBCSampler>
+            <hashTree/>
+          </hashTree>
+          <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="${TC} - Set expenditure limit - ${ELtype}" enabled="true">
+            <stringProp name="dataSource">pool</stringProp>
+            <stringProp name="queryType">Prepared Update Statement</stringProp>
+            <stringProp name="query">INSERT INTO DBE_EXPEND_LIMIT (NU_SERVICE_ID,TX_END_USER_ID,TX_APPPROVIDER_ID,NU_CURRENCY_ID,TX_EL_TYPE,NU_OB_ID,NU_COUNTRY_ID,FT_MAX_AMOUNT,TX_NOTIF_AMOUNTS) VALUES (?,?,?,?,?,?,?,?,?)
+</stringProp>
+            <stringProp name="queryArguments">${nuServiceId_1},${userId},${providerId_1},${currencyId_1},${ELtype},${OBId_1},${countryId_1},${maxAmount},${notifAmounts}</stringProp>
+            <stringProp name="queryArgumentsTypes">DOUBLE,VARCHAR,VARCHAR,DOUBLE,VARCHAR,DOUBLE,DOUBLE,DOUBLE,VARCHAR</stringProp>
+            <stringProp name="variableNames"></stringProp>
+            <stringProp name="resultVariable"></stringProp>
+            <stringProp name="queryTimeout"></stringProp>
+          </JDBCSampler>
+          <hashTree/>
+          <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="Update Test Status" enabled="true">
+            <stringProp name="BeanShellSampler.query">if(ctx.getPreviousResult().isSuccessful() == false) {
+  vars.put(&quot;jiraStatus&quot;, &quot;Fail&quot;);
+  jiraComment = vars.get(&quot;jiraComment&quot;) + &quot; -- Error in request &apos;&quot; + ctx.getPreviousSampler().getName() + &quot;&apos; -- &quot;;
+  vars.put(&quot;jiraComment&quot;, jiraComment);
+}</stringProp>
+            <stringProp name="BeanShellSampler.filename"></stringProp>
+            <stringProp name="BeanShellSampler.parameters"></stringProp>
+            <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+          </BeanShellSampler>
+          <hashTree/>
+        </hashTree>
+        <WhileController guiclass="WhileControllerGui" testclass="WhileController" testname="2. Procedure" enabled="true">
+          <stringProp name="WhileController.condition">${__javaScript(&quot;${endDatasets}&quot; != &quot;&lt;EOF&gt;&quot;)}</stringProp>
+          <stringProp name="TestPlan.comments">GTC-191, GTC-192, GTC-193</stringProp>
+        </WhileController>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="Cabecera HTTP" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">TransactionInfo</stringProp>
+                <stringProp name="Header.value">servid=&quot;${nuneosdpserciceId_1}&quot; appid=&quot;${applicationId}&quot; appProviderId=&quot;${appProviderId_1}&quot;</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="datasets.csv" enabled="true">
+            <stringProp name="filename">${BASEDIR}${TC}-dataset.csv</stringProp>
+            <stringProp name="fileEncoding"></stringProp>
+            <stringProp name="variableNames">paymentOp,endUserId,countryCode,OBcode,serviceId,ppcode,amount,taxAmount,totalAmount,currency,ER_code,ER_answer1,ER_answer2,ER_expensedAmount,ER_nextPeriod,ER_notifications,endDatasets</stringProp>
+            <stringProp name="delimiter">|</stringProp>
+            <boolProp name="quotedData">false</boolProp>
+            <boolProp name="recycle">false</boolProp>
+            <boolProp name="stopThread">false</boolProp>
+            <stringProp name="shareMode">shareMode.group</stringProp>
+          </CSVDataSet>
+          <hashTree/>
+          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Dataset Adjustments" enabled="true"/>
+          <hashTree>
+            <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="${TC} - dataset" enabled="true">
+              <stringProp name="dataSource">pool</stringProp>
+              <stringProp name="queryType">Select Statement</stringProp>
+              <stringProp name="query">SELECT  TX_APPPROVIDER_ID FROM DBE_APPPROVIDER WHERE TX_NAME=&apos;${appProvider}&apos;
+</stringProp>
+              <stringProp name="queryArguments"></stringProp>
+              <stringProp name="queryArgumentsTypes"></stringProp>
+              <stringProp name="variableNames">appProviderId</stringProp>
+              <stringProp name="resultVariable"></stringProp>
+              <stringProp name="TestPlan.comments">TX_APPPROVIDER_ID</stringProp>
+              <stringProp name="queryTimeout"></stringProp>
+            </JDBCSampler>
+            <hashTree/>
+            <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="${TC} - dataset" enabled="true">
+              <stringProp name="dataSource">pool</stringProp>
+              <stringProp name="queryType">Select Statement</stringProp>
+              <stringProp name="query">SELECT  TX_APPPROVIDER_ID FROM DBE_APPPROVIDER WHERE TX_NAME=&apos;${appProvider2}&apos;
+</stringProp>
+              <stringProp name="queryArguments"></stringProp>
+              <stringProp name="queryArgumentsTypes"></stringProp>
+              <stringProp name="variableNames">appProviderId2</stringProp>
+              <stringProp name="resultVariable"></stringProp>
+              <stringProp name="TestPlan.comments">TX_APPPROVIDER_ID</stringProp>
+              <stringProp name="queryTimeout"></stringProp>
+            </JDBCSampler>
+            <hashTree/>
+            <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="${TC} - dataset" enabled="true">
+              <stringProp name="dataSource">pool</stringProp>
+              <stringProp name="queryType">Select Statement</stringProp>
+              <stringProp name="query">SELECT  NU_SERVICE_ID,NU_NEOSDP_SERVICEID FROM BM_SERVICE WHERE TX_NAME=&apos;${serviceId}&apos;
+</stringProp>
+              <stringProp name="queryArguments"></stringProp>
+              <stringProp name="queryArgumentsTypes"></stringProp>
+              <stringProp name="variableNames">nuserviceId,nuneosdpserciceId</stringProp>
+              <stringProp name="resultVariable"></stringProp>
+              <stringProp name="TestPlan.comments">SERVICE_ID</stringProp>
+              <stringProp name="queryTimeout"></stringProp>
+            </JDBCSampler>
+            <hashTree/>
+            <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="${TC} - dataset" enabled="true">
+              <stringProp name="dataSource">pool</stringProp>
+              <stringProp name="queryType">Select Statement</stringProp>
+              <stringProp name="query">SELECT NU_CURRENCY_ID FROM BM_CURRENCY WHERE TX_ISO4217_CODE=&apos;${currency}&apos;</stringProp>
+              <stringProp name="queryArguments"></stringProp>
+              <stringProp name="queryArgumentsTypes"></stringProp>
+              <stringProp name="variableNames">nucurrencyId</stringProp>
+              <stringProp name="resultVariable"></stringProp>
+              <stringProp name="TestPlan.comments">NU_CURRENCY_ID</stringProp>
+              <stringProp name="queryTimeout"></stringProp>
+            </JDBCSampler>
+            <hashTree/>
+            <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If ${ER_nextPeriod}==daily" enabled="true">
+              <stringProp name="IfController.condition">${__javaScript(&quot;${ER_nextPeriod}&quot; == &quot;daily&quot;)}</stringProp>
+              <boolProp name="IfController.evaluateAll">false</boolProp>
+            </IfController>
+            <hashTree>
+              <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="${TC} - nextDay" enabled="true">
+                <stringProp name="dataSource">pool</stringProp>
+                <stringProp name="queryType">Select Statement</stringProp>
+                <stringProp name="query">SELECT TO_CHAR (sysdate+1, &apos;YYYY-MM-DD&apos;) &quot;NOW&quot; FROM DUAL</stringProp>
+                <stringProp name="queryArguments"></stringProp>
+                <stringProp name="queryArgumentsTypes"></stringProp>
+                <stringProp name="variableNames">nextDay</stringProp>
+                <stringProp name="resultVariable"></stringProp>
+                <stringProp name="queryTimeout"></stringProp>
+              </JDBCSampler>
+              <hashTree/>
+              <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Temporizador Constante" enabled="true">
+                <stringProp name="ConstantTimer.delay">1000</stringProp>
+              </ConstantTimer>
+              <hashTree/>
+              <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="sysdate" enabled="true">
+                <stringProp name="filename"></stringProp>
+                <stringProp name="parameters"></stringProp>
+                <boolProp name="resetInterpreter">false</boolProp>
+                <stringProp name="script">vars.put(&quot;sysdate&quot;,&quot;${nextDay_1} 00:00:00.0&quot;);</stringProp>
+              </BeanShellPreProcessor>
+              <hashTree/>
+              <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="${TC} - For daily - ${sysdate}" enabled="true">
+                <boolProp name="displayJMeterProperties">false</boolProp>
+                <boolProp name="displayJMeterVariables">true</boolProp>
+                <boolProp name="displaySystemProperties">false</boolProp>
+              </DebugSampler>
+              <hashTree/>
+            </hashTree>
+            <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If ${ER_nextPeriod}==weekly" enabled="true">
+              <stringProp name="IfController.condition">${__javaScript(&quot;${ER_nextPeriod}&quot; == &quot;weekly&quot;)}</stringProp>
+              <boolProp name="IfController.evaluateAll">false</boolProp>
+            </IfController>
+            <hashTree>
+              <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="${TC} - weekDay" enabled="true">
+                <stringProp name="TestPlan.comments">Returns the day of the week from 1 to 7, where 1 is Monday and 7 is Sunday</stringProp>
+                <stringProp name="dataSource">pool</stringProp>
+                <stringProp name="queryType">Select Statement</stringProp>
+                <stringProp name="query">select to_char(sysdate,&apos;D&apos;) from dual</stringProp>
+                <stringProp name="queryArguments"></stringProp>
+                <stringProp name="queryArgumentsTypes"></stringProp>
+                <stringProp name="variableNames">weekDay</stringProp>
+                <stringProp name="resultVariable"></stringProp>
+                <stringProp name="queryTimeout"></stringProp>
+              </JDBCSampler>
+              <hashTree/>
+              <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="${TC} - Next firstWeekDay" enabled="true">
+                <stringProp name="dataSource">pool</stringProp>
+                <stringProp name="queryType">Select Statement</stringProp>
+                <stringProp name="query">SELECT TO_CHAR (sysdate+(8-${weekDay_1}), &apos;YYYY-MM-DD&apos;) &quot;NOW&quot; FROM DUAL</stringProp>
+                <stringProp name="queryArguments"></stringProp>
+                <stringProp name="queryArgumentsTypes"></stringProp>
+                <stringProp name="variableNames">firstWeekDay</stringProp>
+                <stringProp name="resultVariable"></stringProp>
+                <stringProp name="queryTimeout"></stringProp>
+              </JDBCSampler>
+              <hashTree/>
+              <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Temporizador Constante" enabled="true">
+                <stringProp name="ConstantTimer.delay">1000</stringProp>
+              </ConstantTimer>
+              <hashTree/>
+              <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="sysdate" enabled="true">
+                <stringProp name="filename"></stringProp>
+                <stringProp name="parameters"></stringProp>
+                <boolProp name="resetInterpreter">false</boolProp>
+                <stringProp name="script">vars.put(&quot;sysdate&quot;,&quot;${firstWeekDay_1} 00:00:00.0&quot;);</stringProp>
+              </BeanShellPreProcessor>
+              <hashTree/>
+              <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="${TC} - For weekly - ${sysdate}" enabled="true">
+                <boolProp name="displayJMeterProperties">false</boolProp>
+                <boolProp name="displayJMeterVariables">true</boolProp>
+                <boolProp name="displaySystemProperties">false</boolProp>
+              </DebugSampler>
+              <hashTree/>
+            </hashTree>
+            <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If ${ER_nextPeriod}==monthly" enabled="true">
+              <stringProp name="IfController.condition">${__javaScript(&quot;${ER_nextPeriod}&quot; == &quot;monthly&quot;)}</stringProp>
+              <boolProp name="IfController.evaluateAll">false</boolProp>
+            </IfController>
+            <hashTree>
+              <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="${TC} - Next firstMonthDay" enabled="true">
+                <stringProp name="TestPlan.comments">To retrieve the first day of the next month   (CURISIDAD: select TO_CHAR (add_months(last_day(sysdate),+1) + 1,&apos;YYYY-MM-DD&apos;) from dual)</stringProp>
+                <stringProp name="dataSource">pool</stringProp>
+                <stringProp name="queryType">Select Statement</stringProp>
+                <stringProp name="query">select TO_CHAR (last_day(sysdate) + 1,&apos;YYYY-MM-DD&apos;) from dual
+</stringProp>
+                <stringProp name="queryArguments"></stringProp>
+                <stringProp name="queryArgumentsTypes"></stringProp>
+                <stringProp name="variableNames">firstMonthDay</stringProp>
+                <stringProp name="resultVariable"></stringProp>
+                <stringProp name="queryTimeout"></stringProp>
+              </JDBCSampler>
+              <hashTree/>
+              <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Temporizador Constante" enabled="true">
+                <stringProp name="ConstantTimer.delay">1000</stringProp>
+              </ConstantTimer>
+              <hashTree/>
+              <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="sysdate" enabled="true">
+                <stringProp name="filename"></stringProp>
+                <stringProp name="parameters"></stringProp>
+                <boolProp name="resetInterpreter">false</boolProp>
+                <stringProp name="script">vars.put(&quot;sysdate&quot;,&quot;${firstMonthDay_1} 00:00:00.0&quot;);</stringProp>
+              </BeanShellPreProcessor>
+              <hashTree/>
+              <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="${TC} - For monthly - ${sysdate}" enabled="true">
+                <boolProp name="displayJMeterProperties">false</boolProp>
+                <boolProp name="displayJMeterVariables">true</boolProp>
+                <boolProp name="displaySystemProperties">false</boolProp>
+              </DebugSampler>
+              <hashTree/>
+            </hashTree>
+          </hashTree>
+          <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="Debug ${TC}" enabled="true">
+            <boolProp name="displayJMeterProperties">false</boolProp>
+            <boolProp name="displayJMeterVariables">true</boolProp>
+            <boolProp name="displaySystemProperties">false</boolProp>
+          </DebugSampler>
+          <hashTree/>
+          <IfController guiclass="IfControllerPanel" testclass="IfController" testname="GTC-XXX" enabled="true">
+            <stringProp name="IfController.condition">${__javaScript(&quot;${TC}&quot;==&quot;GTC-191&quot; || &quot;${TC}&quot;==&quot;GTC-192&quot; || &quot;${TC}&quot;==&quot;GTC-193&quot;  || &quot;${TC}&quot;==&quot;GTC-1508&quot;  || &quot;${TC}&quot;==&quot;GTC-1509&quot;  ||  &quot;${TC}&quot;==&quot;GTC-239&quot; || &quot;${TC}&quot;==&quot;GTC-196&quot; ||&quot;${TC}&quot;==&quot;GTC-200&quot; ||  &quot;${TC}&quot;==&quot;GTC-194&quot; || &quot;${TC}&quot;==&quot;GTC-205&quot; || &quot;${TC}&quot;==&quot;GTC-207&quot; || &quot;${TC}&quot;==&quot;GTC-206&quot; || &quot;${TC}&quot;==&quot;GTC-215&quot; || &quot;${TC}&quot;==&quot;GTC-209&quot;)}</stringProp>
+            <boolProp name="IfController.evaluateAll">false</boolProp>
+          </IfController>
+          <hashTree>
+            <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Payment" enabled="true">
+              <stringProp name="IfController.condition">${__javaScript(&quot;${paymentOp}&quot; == &quot;payment&quot;)}</stringProp>
+              <boolProp name="IfController.evaluateAll">false</boolProp>
+            </IfController>
+            <hashTree>
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="- ${TC} - *** Payment - ${amount} ${currency} ***" enabled="true">
+                <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+                <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                  <collectionProp name="Arguments.arguments">
+                    <elementProp name="" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                      <stringProp name="Argument.value">{&#xd;
+ &quot;userInfo&quot;: {&#xd;
+   &quot;endUserId&quot;: &quot;${endUserId}&quot;,&#xd;
+   &quot;operatorId&quot;: ${countryCode}${OBcode},&#xd;
+   &quot;paymentMethod&quot;: {&#xd;
+      &quot;type&quot;: &quot;directToBill&quot;&#xd;
+   }&#xd;
+ },&#xd;
+ &quot;vendorInfo&quot;: {&#xd;
+   &quot;operatorId&quot;:  ${countryCode}${OBcode},&#xd;
+   &quot;callbackUrl&quot;: &quot;http://callback.tid.es&quot;&#xd;
+ },&#xd;
+ &quot;productInfo&quot;: {&#xd;
+   &quot;amount&quot;: ${amount},&#xd;
+   &quot;taxAmount&quot;: ${taxAmount},&#xd;
+   &quot;currency&quot;: &quot;${currency}&quot;&#xd;
+ },&#xd;
+ &quot;operationInfo&quot;: {&#xd;
+   &quot;operationDescription&quot;: &quot;paymentOK-${TC}&quot;,&#xd;
+   &quot;authorizationEndpointURL&quot;: &quot;http://www.tid.es&quot;&#xd;
+ }&#xd;
+}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                    </elementProp>
+                  </collectionProp>
+                </elementProp>
+                <stringProp name="HTTPSampler.domain"></stringProp>
+                <stringProp name="HTTPSampler.port"></stringProp>
+                <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                <stringProp name="HTTPSampler.response_timeout"></stringProp>
+                <stringProp name="HTTPSampler.protocol"></stringProp>
+                <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+                <stringProp name="HTTPSampler.path">/payment/v2/payments</stringProp>
+                <stringProp name="HTTPSampler.method">POST</stringProp>
+                <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                <boolProp name="HTTPSampler.monitor">false</boolProp>
+                <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+                <stringProp name="TestPlan.comments">${endUserId}</stringProp>
+              </HTTPSamplerProxy>
+              <hashTree>
+                <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Extractor de Expresiones Regulares" enabled="true">
+                  <stringProp name="RegexExtractor.useHeaders">unescaped</stringProp>
+                  <stringProp name="RegexExtractor.refname">txId</stringProp>
+                  <stringProp name="RegexExtractor.regex">transactionId&quot;?:&quot;?([- A-Za-z0-9]+)</stringProp>
+                  <stringProp name="RegexExtractor.template">$1$</stringProp>
+                  <stringProp name="RegexExtractor.default">kk</stringProp>
+                  <stringProp name="RegexExtractor.match_number">1</stringProp>
+                </RegexExtractor>
+                <hashTree/>
+                <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="CHECK: Code" enabled="true">
+                  <collectionProp name="Asserion.test_strings">
+                    <stringProp name="812172277">${ER_code}</stringProp>
+                  </collectionProp>
+                  <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+                  <boolProp name="Assertion.assume_success">true</boolProp>
+                  <intProp name="Assertion.test_type">2</intProp>
+                  <stringProp name="Assertion.scope">all</stringProp>
+                </ResponseAssertion>
+                <hashTree/>
+                <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="CHECK: Despription" enabled="true">
+                  <collectionProp name="Asserion.test_strings">
+                    <stringProp name="-2054141755">${ER_answer1}</stringProp>
+                    <stringProp name="-2054141724">${ER_answer2}</stringProp>
+                  </collectionProp>
+                  <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                  <boolProp name="Assertion.assume_success">true</boolProp>
+                  <intProp name="Assertion.test_type">2</intProp>
+                  <stringProp name="Assertion.scope">all</stringProp>
+                </ResponseAssertion>
+                <hashTree/>
+              </hashTree>
+              <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="Update Test Status" enabled="true">
+                <stringProp name="BeanShellSampler.query">if(ctx.getPreviousResult().isSuccessful() == false) {
+  vars.put(&quot;jiraStatus&quot;, &quot;Fail&quot;);
+  jiraComment = vars.get(&quot;jiraComment&quot;) + &quot; -- Error in request &apos;&quot; + ctx.getPreviousSampler().getName() + &quot;&apos; -- &quot;;
+  vars.put(&quot;jiraComment&quot;, jiraComment);
+}</stringProp>
+                <stringProp name="BeanShellSampler.filename"></stringProp>
+                <stringProp name="BeanShellSampler.parameters"></stringProp>
+                <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+              </BeanShellSampler>
+              <hashTree/>
+            </hashTree>
+            <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Refund" enabled="true">
+              <stringProp name="IfController.condition">${__javaScript(&quot;${paymentOp}&quot; == &quot;refund&quot;)}</stringProp>
+              <boolProp name="IfController.evaluateAll">false</boolProp>
+            </IfController>
+            <hashTree>
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="- ${TC} - *** Refund ***" enabled="true">
+                <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+                <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                  <collectionProp name="Arguments.arguments">
+                    <elementProp name="" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                      <stringProp name="Argument.value">{&#xd;
+  &quot;userInfo&quot;:null,&#xd;
+  &quot;vendorInfo&quot;:{&#xd;
+    &quot;operatorId&quot;:${countryCode}${OBcode}&#xd;
+  },&#xd;
+ &quot;productInfo&quot;: {&#xd;
+    &quot;amount&quot;: ${amount},&#xd;
+    &quot;taxAmount&quot;: ${taxAmount},&#xd;
+    &quot;currency&quot;: ${currency}&#xd;
+  },&#xd;
+  &quot;operationInfo&quot;:{&#xd;
+    &quot;originalTransactionId&quot;:&quot;${txId}&quot;&#xd;
+  },&#xd;
+  &quot;additionalData&quot;:null&#xd;
+}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                    </elementProp>
+                  </collectionProp>
+                </elementProp>
+                <stringProp name="HTTPSampler.domain"></stringProp>
+                <stringProp name="HTTPSampler.port"></stringProp>
+                <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                <stringProp name="HTTPSampler.response_timeout"></stringProp>
+                <stringProp name="HTTPSampler.protocol"></stringProp>
+                <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+                <stringProp name="HTTPSampler.path">/payment/v2/refunds</stringProp>
+                <stringProp name="HTTPSampler.method">POST</stringProp>
+                <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                <boolProp name="HTTPSampler.monitor">false</boolProp>
+                <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              </HTTPSamplerProxy>
+              <hashTree>
+                <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="CHECK: Code" enabled="true">
+                  <collectionProp name="Asserion.test_strings">
+                    <stringProp name="812172277">${ER_code}</stringProp>
+                  </collectionProp>
+                  <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+                  <boolProp name="Assertion.assume_success">true</boolProp>
+                  <intProp name="Assertion.test_type">2</intProp>
+                  <stringProp name="Assertion.scope">all</stringProp>
+                </ResponseAssertion>
+                <hashTree/>
+                <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="CHECK: Despription" enabled="true">
+                  <collectionProp name="Asserion.test_strings">
+                    <stringProp name="-2054141755">${ER_answer1}</stringProp>
+                    <stringProp name="-2054141724">${ER_answer2}</stringProp>
+                  </collectionProp>
+                  <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                  <boolProp name="Assertion.assume_success">true</boolProp>
+                  <intProp name="Assertion.test_type">2</intProp>
+                  <stringProp name="Assertion.scope">all</stringProp>
+                </ResponseAssertion>
+                <hashTree/>
+              </hashTree>
+              <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="Update Test Status" enabled="true">
+                <stringProp name="BeanShellSampler.query">if(ctx.getPreviousResult().isSuccessful() == false) {
+  vars.put(&quot;jiraStatus&quot;, &quot;Fail&quot;);
+  jiraComment = vars.get(&quot;jiraComment&quot;) + &quot; -- Error in request &apos;&quot; + ctx.getPreviousSampler().getName() + &quot;&apos; -- &quot;;
+  vars.put(&quot;jiraComment&quot;, jiraComment);
+}</stringProp>
+                <stringProp name="BeanShellSampler.filename"></stringProp>
+                <stringProp name="BeanShellSampler.parameters"></stringProp>
+                <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+              </BeanShellSampler>
+              <hashTree/>
+            </hashTree>
+          </hashTree>
+          <IfController guiclass="IfControllerPanel" testclass="IfController" testname="GTC-202 (User OB-Country)" enabled="true">
+            <stringProp name="IfController.condition">${__javaScript(&quot;${TC}&quot;==&quot;GTC-202&quot;)}</stringProp>
+            <boolProp name="IfController.evaluateAll">false</boolProp>
+          </IfController>
+          <hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="${TC} - Payment - ${amount} ${currency}" enabled="true">
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">{&#xd;
+ &quot;userInfo&quot;: {&#xd;
+   &quot;endUserId&quot;: &quot;${endUserId}&quot;,&#xd;
+   &quot;operatorId&quot;: ${countryCode}${OBcode},&#xd;
+   &quot;paymentMethod&quot;: {&#xd;
+      &quot;type&quot;: &quot;directToBill&quot;&#xd;
+   }&#xd;
+ },&#xd;
+ &quot;vendorInfo&quot;: {&#xd;
+   &quot;merchantId&quot;: &quot;PDI&quot;,&#xd;
+   &quot;operatorId&quot;:  23411,&#xd;
+   &quot;callbackUrl&quot;: &quot;http://callback.tid.es&quot;&#xd;
+ },&#xd;
+ &quot;productInfo&quot;: {&#xd;
+   &quot;productId&quot;: &quot;${productId}&quot;,&#xd;
+   &quot;productClass&quot;: &quot;videoclip&quot;,&#xd;
+   &quot;amount&quot;: ${amount},&#xd;
+   &quot;taxAmount&quot;: ${taxAmount},&#xd;
+   &quot;currency&quot;: &quot;${currency}&quot;&#xd;
+ },&#xd;
+ &quot;operationInfo&quot;: {&#xd;
+   &quot;operationDescription&quot;: &quot;paymentOK-${test-case}&quot;,&#xd;
+   &quot;authorizationEndpointURL&quot;: &quot;http://www.tid.es&quot;&#xd;
+ }&#xd;
+}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain"></stringProp>
+              <stringProp name="HTTPSampler.port"></stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+              <stringProp name="HTTPSampler.protocol"></stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">/payment/v2/payments</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <boolProp name="HTTPSampler.monitor">false</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              <stringProp name="TestPlan.comments">${endUserId}</stringProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Extractor de Expresiones Regulares" enabled="true">
+                <stringProp name="RegexExtractor.useHeaders">unescaped</stringProp>
+                <stringProp name="RegexExtractor.refname">txId</stringProp>
+                <stringProp name="RegexExtractor.regex">transactionId&quot;?:&quot;?([- A-Za-z0-9]+)</stringProp>
+                <stringProp name="RegexExtractor.template">$1$</stringProp>
+                <stringProp name="RegexExtractor.default">kk</stringProp>
+                <stringProp name="RegexExtractor.match_number">1</stringProp>
+              </RegexExtractor>
+              <hashTree/>
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="CHECK: Code" enabled="true">
+                <collectionProp name="Asserion.test_strings">
+                  <stringProp name="812172277">${ER_code}</stringProp>
+                </collectionProp>
+                <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+                <boolProp name="Assertion.assume_success">true</boolProp>
+                <intProp name="Assertion.test_type">2</intProp>
+                <stringProp name="Assertion.scope">all</stringProp>
+              </ResponseAssertion>
+              <hashTree/>
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="CHECK: Despription" enabled="true">
+                <collectionProp name="Asserion.test_strings">
+                  <stringProp name="-2054141755">${ER_answer1}</stringProp>
+                  <stringProp name="-2054141724">${ER_answer2}</stringProp>
+                </collectionProp>
+                <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                <boolProp name="Assertion.assume_success">true</boolProp>
+                <intProp name="Assertion.test_type">2</intProp>
+                <stringProp name="Assertion.scope">all</stringProp>
+              </ResponseAssertion>
+              <hashTree/>
+            </hashTree>
+          </hashTree>
+          <IfController guiclass="IfControllerPanel" testclass="IfController" testname="GTC-317 (Different providers)" enabled="true">
+            <stringProp name="IfController.condition">${__javaScript(&quot;${TC}&quot;==&quot;GTC-317&quot;)}</stringProp>
+            <boolProp name="IfController.evaluateAll">false</boolProp>
+          </IfController>
+          <hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="${TC} - Payment - appProviderId" enabled="true">
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">{&#xd;
+ &quot;userInfo&quot;: {&#xd;
+   &quot;endUserId&quot;: &quot;${endUserId}&quot;,&#xd;
+   &quot;operatorId&quot;: ${countryCode}${OBcode},&#xd;
+   &quot;paymentMethod&quot;: {&#xd;
+      &quot;type&quot;: &quot;directToBill&quot;&#xd;
+   }&#xd;
+ },&#xd;
+ &quot;vendorInfo&quot;: {&#xd;
+   &quot;merchantId&quot;: &quot;PDI&quot;,&#xd;
+   &quot;operatorId&quot;:  23411,&#xd;
+   &quot;callbackUrl&quot;: &quot;http://callback.tid.es&quot;&#xd;
+ },&#xd;
+ &quot;productInfo&quot;: {&#xd;
+   &quot;productId&quot;: &quot;${productId}&quot;,&#xd;
+   &quot;productClass&quot;: &quot;videoclip&quot;,&#xd;
+   &quot;amount&quot;: ${amount},&#xd;
+   &quot;taxAmount&quot;: ${taxAmount},&#xd;
+   &quot;currency&quot;: &quot;${currency}&quot;&#xd;
+ },&#xd;
+ &quot;operationInfo&quot;: {&#xd;
+   &quot;operationDescription&quot;: &quot;paymentNOK-${test-case}&quot;,&#xd;
+   &quot;authorizationEndpointURL&quot;: &quot;http://www.tid.es&quot;&#xd;
+ }&#xd;
+}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain"></stringProp>
+              <stringProp name="HTTPSampler.port"></stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+              <stringProp name="HTTPSampler.protocol"></stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">/payment/v2/payments</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <boolProp name="HTTPSampler.monitor">false</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              <stringProp name="TestPlan.comments">${endUserId}</stringProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Extractor de Expresiones Regulares" enabled="true">
+                <stringProp name="RegexExtractor.useHeaders">unescaped</stringProp>
+                <stringProp name="RegexExtractor.refname">txId</stringProp>
+                <stringProp name="RegexExtractor.regex">transactionId&quot;?:&quot;?([- A-Za-z0-9]+)</stringProp>
+                <stringProp name="RegexExtractor.template">$1$</stringProp>
+                <stringProp name="RegexExtractor.default">kk</stringProp>
+                <stringProp name="RegexExtractor.match_number">1</stringProp>
+              </RegexExtractor>
+              <hashTree/>
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="CHECK: Code" enabled="true">
+                <collectionProp name="Asserion.test_strings">
+                  <stringProp name="51512">404</stringProp>
+                </collectionProp>
+                <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+                <boolProp name="Assertion.assume_success">true</boolProp>
+                <intProp name="Assertion.test_type">2</intProp>
+                <stringProp name="Assertion.scope">all</stringProp>
+              </ResponseAssertion>
+              <hashTree/>
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="CHECK: Despription" enabled="true">
+                <collectionProp name="Asserion.test_strings">
+                  <stringProp name="-1121049175">SVC3705</stringProp>
+                  <stringProp name="-880105895">Insufficient payment method balance: Limit daily exceeded</stringProp>
+                </collectionProp>
+                <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                <boolProp name="Assertion.assume_success">true</boolProp>
+                <intProp name="Assertion.test_type">2</intProp>
+                <stringProp name="Assertion.scope">all</stringProp>
+              </ResponseAssertion>
+              <hashTree/>
+            </hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="${TC} - Payment - appProviderId2" enabled="true">
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">{&#xd;
+ &quot;userInfo&quot;: {&#xd;
+   &quot;endUserId&quot;: &quot;${endUserId}&quot;,&#xd;
+   &quot;operatorId&quot;: ${countryCode}${OBcode},&#xd;
+   &quot;paymentMethod&quot;: {&#xd;
+      &quot;type&quot;: &quot;directToBill&quot;&#xd;
+   }&#xd;
+ },&#xd;
+ &quot;vendorInfo&quot;: {&#xd;
+   &quot;merchantId&quot;: &quot;PDI&quot;,&#xd;
+   &quot;operatorId&quot;:  23411,&#xd;
+   &quot;callbackUrl&quot;: &quot;http://callback.tid.es&quot;&#xd;
+ },&#xd;
+ &quot;productInfo&quot;: {&#xd;
+   &quot;productId&quot;: &quot;${productId}&quot;,&#xd;
+   &quot;productClass&quot;: &quot;videoclip&quot;,&#xd;
+   &quot;amount&quot;: ${amount},&#xd;
+   &quot;taxAmount&quot;: ${taxAmount},&#xd;
+   &quot;currency&quot;: &quot;${currency}&quot;&#xd;
+ },&#xd;
+ &quot;operationInfo&quot;: {&#xd;
+   &quot;operationDescription&quot;: &quot;paymentOK-${test-case}&quot;,&#xd;
+   &quot;authorizationEndpointURL&quot;: &quot;http://www.tid.es&quot;&#xd;
+ }&#xd;
+}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain"></stringProp>
+              <stringProp name="HTTPSampler.port"></stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+              <stringProp name="HTTPSampler.protocol"></stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">/payment/v2/payments</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <boolProp name="HTTPSampler.monitor">false</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              <stringProp name="TestPlan.comments">${endUserId}</stringProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="Cabecera HTTP" enabled="true">
+                <collectionProp name="HeaderManager.headers">
+                  <elementProp name="" elementType="Header">
+                    <stringProp name="Header.name">Content-Type</stringProp>
+                    <stringProp name="Header.value">application/json</stringProp>
+                  </elementProp>
+                  <elementProp name="" elementType="Header">
+                    <stringProp name="Header.name">Accept</stringProp>
+                    <stringProp name="Header.value">application/json</stringProp>
+                  </elementProp>
+                  <elementProp name="" elementType="Header">
+                    <stringProp name="Header.name">TransactionInfo</stringProp>
+                    <stringProp name="Header.value">servid=&quot;${nuneosdpserciceId_1}&quot; appid=&quot;${applicationId}&quot; appProviderId=&quot;${appProviderId2_1}&quot;</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </HeaderManager>
+              <hashTree/>
+              <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Extractor de Expresiones Regulares" enabled="true">
+                <stringProp name="RegexExtractor.useHeaders">unescaped</stringProp>
+                <stringProp name="RegexExtractor.refname">txId</stringProp>
+                <stringProp name="RegexExtractor.regex">transactionId&quot;?:&quot;?([- A-Za-z0-9]+)</stringProp>
+                <stringProp name="RegexExtractor.template">$1$</stringProp>
+                <stringProp name="RegexExtractor.default">kk</stringProp>
+                <stringProp name="RegexExtractor.match_number">1</stringProp>
+              </RegexExtractor>
+              <hashTree/>
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="CHECK: Code" enabled="true">
+                <collectionProp name="Asserion.test_strings">
+                  <stringProp name="49587">201</stringProp>
+                </collectionProp>
+                <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+                <boolProp name="Assertion.assume_success">true</boolProp>
+                <intProp name="Assertion.test_type">2</intProp>
+                <stringProp name="Assertion.scope">all</stringProp>
+              </ResponseAssertion>
+              <hashTree/>
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="CHECK: Despription" enabled="true">
+                <collectionProp name="Asserion.test_strings">
+                  <stringProp name="-1891251184">Charged</stringProp>
+                  <stringProp name="-86519198">paymentOK</stringProp>
+                </collectionProp>
+                <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                <boolProp name="Assertion.assume_success">true</boolProp>
+                <intProp name="Assertion.test_type">2</intProp>
+                <stringProp name="Assertion.scope">all</stringProp>
+              </ResponseAssertion>
+              <hashTree/>
+            </hashTree>
+          </hashTree>
+          <IfController guiclass="IfControllerPanel" testclass="IfController" testname="GTC-295 (Pricepoints)" enabled="true">
+            <stringProp name="IfController.condition">${__javaScript(&quot;${TC}&quot;==&quot;GTC-295&quot;)}</stringProp>
+            <boolProp name="IfController.evaluateAll">false</boolProp>
+          </IfController>
+          <hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="${TC} - Payment - ${ppcode}" enabled="true">
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">{&#xd;
+ &quot;userInfo&quot;: {&#xd;
+   &quot;endUserId&quot;: &quot;${endUserId}&quot;,&#xd;
+   &quot;operatorId&quot;: ${countryCode}${OBcode},&#xd;
+   &quot;paymentMethod&quot;: {&#xd;
+      &quot;type&quot;: &quot;directToBill&quot;&#xd;
+   }&#xd;
+ },&#xd;
+ &quot;vendorInfo&quot;: {&#xd;
+   &quot;merchantId&quot;: &quot;PDI&quot;,&#xd;
+   &quot;operatorId&quot;: ${countryCode}${OBcode},&#xd;
+   &quot;callbackUrl&quot;: &quot;http://callback.tid.es&quot;&#xd;
+ },&#xd;
+ &quot;productInfo&quot;: {&#xd;
+   &quot;productId&quot;: &quot;${productId}&quot;,&#xd;
+   &quot;productClass&quot;: &quot;videoclip&quot;,&#xd;
+   &quot;code&quot;: &quot;${ppcode}&quot;&#xd;
+ },&#xd;
+ &quot;operationInfo&quot;: {&#xd;
+   &quot;operationDescription&quot;: &quot;paymentOK-${test-case}&quot;,&#xd;
+   &quot;authorizationEndpointURL&quot;: &quot;http://www.tid.es&quot;&#xd;
+ }&#xd;
+}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain"></stringProp>
+              <stringProp name="HTTPSampler.port"></stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+              <stringProp name="HTTPSampler.protocol"></stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">/payment/v2/payments</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <boolProp name="HTTPSampler.monitor">false</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Extractor de Expresiones Regulares" enabled="true">
+                <stringProp name="RegexExtractor.useHeaders">unescaped</stringProp>
+                <stringProp name="RegexExtractor.refname">txId</stringProp>
+                <stringProp name="RegexExtractor.regex">transactionId&quot;?:&quot;?([- A-Za-z0-9]+)</stringProp>
+                <stringProp name="RegexExtractor.template">$1$</stringProp>
+                <stringProp name="RegexExtractor.default">kk</stringProp>
+                <stringProp name="RegexExtractor.match_number">1</stringProp>
+              </RegexExtractor>
+              <hashTree/>
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="CHECK: Code" enabled="true">
+                <collectionProp name="Asserion.test_strings">
+                  <stringProp name="812172277">${ER_code}</stringProp>
+                </collectionProp>
+                <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+                <boolProp name="Assertion.assume_success">true</boolProp>
+                <intProp name="Assertion.test_type">2</intProp>
+                <stringProp name="Assertion.scope">all</stringProp>
+              </ResponseAssertion>
+              <hashTree/>
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="CHECK: Despription" enabled="true">
+                <collectionProp name="Asserion.test_strings">
+                  <stringProp name="-2054141755">${ER_answer1}</stringProp>
+                  <stringProp name="-2054141724">${ER_answer2}</stringProp>
+                </collectionProp>
+                <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                <boolProp name="Assertion.assume_success">true</boolProp>
+                <intProp name="Assertion.test_type">2</intProp>
+                <stringProp name="Assertion.scope">all</stringProp>
+              </ResponseAssertion>
+              <hashTree/>
+            </hashTree>
+          </hashTree>
+          <IfController guiclass="IfControllerPanel" testclass="IfController" testname="GTC-462 (Error)" enabled="true">
+            <stringProp name="IfController.condition">${__javaScript(&quot;${TC}&quot;==&quot;GTC-462&quot;)}</stringProp>
+            <boolProp name="IfController.evaluateAll">false</boolProp>
+          </IfController>
+          <hashTree>
+            <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If PE-Error" enabled="true">
+              <stringProp name="IfController.condition">${__javaScript(&quot;${paymentOp}&quot; == &quot;pe-error&quot;)}</stringProp>
+              <boolProp name="IfController.evaluateAll">false</boolProp>
+            </IfController>
+            <hashTree>
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="- ${TC} - *** Payment PE Error - Wrong Header ***" enabled="true">
+                <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+                <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                  <collectionProp name="Arguments.arguments">
+                    <elementProp name="" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                      <stringProp name="Argument.value">{&#xd;
+ &quot;userInfo&quot;: {&#xd;
+   &quot;endUserId&quot;: &quot;${endUserId}&quot;,&#xd;
+   &quot;operatorId&quot;: ${countryCode}${OBcode},&#xd;
+   &quot;paymentMethod&quot;: {&#xd;
+      &quot;type&quot;: &quot;directToBill&quot;&#xd;
+   }&#xd;
+ },&#xd;
+ &quot;vendorInfo&quot;: {&#xd;
+   &quot;merchantId&quot;: &quot;PDI&quot;,&#xd;
+   &quot;operatorId&quot;:  ${countryCode}${OBcode},&#xd;
+   &quot;callbackUrl&quot;: &quot;http://callback.tid.es&quot;&#xd;
+ },&#xd;
+ &quot;productInfo&quot;: {&#xd;
+   &quot;productId&quot;: &quot;${productId}&quot;,&#xd;
+   &quot;productClass&quot;: &quot;videoclip&quot;,&#xd;
+   &quot;amount&quot;: ${amount},&#xd;
+   &quot;currency&quot;: &quot;${currency}&quot;&#xd;
+ },&#xd;
+ &quot;operationInfo&quot;: {&#xd;
+   &quot;operationDescription&quot;: &quot;jmeter-payment-${TC}&quot;,&#xd;
+   &quot;authorizationEndpointURL&quot;: &quot;http://www.tid.es&quot;&#xd;
+ }&#xd;
+}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                    </elementProp>
+                  </collectionProp>
+                </elementProp>
+                <stringProp name="HTTPSampler.domain"></stringProp>
+                <stringProp name="HTTPSampler.port"></stringProp>
+                <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                <stringProp name="HTTPSampler.response_timeout"></stringProp>
+                <stringProp name="HTTPSampler.protocol"></stringProp>
+                <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+                <stringProp name="HTTPSampler.path">/payment/v2/payments</stringProp>
+                <stringProp name="HTTPSampler.method">POST</stringProp>
+                <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                <boolProp name="HTTPSampler.monitor">false</boolProp>
+                <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+                <stringProp name="TestPlan.comments">${endUserId}</stringProp>
+              </HTTPSamplerProxy>
+              <hashTree>
+                <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="Cabecera HTTP" enabled="true">
+                  <collectionProp name="HeaderManager.headers">
+                    <elementProp name="" elementType="Header">
+                      <stringProp name="Header.name">Content-Type</stringProp>
+                      <stringProp name="Header.value">application/json</stringProp>
+                    </elementProp>
+                    <elementProp name="" elementType="Header">
+                      <stringProp name="Header.name">Accept</stringProp>
+                      <stringProp name="Header.value">application/json</stringProp>
+                    </elementProp>
+                    <elementProp name="" elementType="Header">
+                      <stringProp name="Header.name">TransactionInfo</stringProp>
+                      <stringProp name="Header.value">servid=&quot;${nuneosdpserciceId_1}&quot; appid=&quot;${applicationId}&quot;</stringProp>
+                    </elementProp>
+                  </collectionProp>
+                </HeaderManager>
+                <hashTree/>
+                <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Extractor de Expresiones Regulares" enabled="true">
+                  <stringProp name="RegexExtractor.useHeaders">unescaped</stringProp>
+                  <stringProp name="RegexExtractor.refname">txId</stringProp>
+                  <stringProp name="RegexExtractor.regex">transactionId&quot;?:&quot;?([- A-Za-z0-9]+)</stringProp>
+                  <stringProp name="RegexExtractor.template">$1$</stringProp>
+                  <stringProp name="RegexExtractor.default">kk</stringProp>
+                  <stringProp name="RegexExtractor.match_number">1</stringProp>
+                </RegexExtractor>
+                <hashTree/>
+                <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="CHECK: Code" enabled="true">
+                  <collectionProp name="Asserion.test_strings">
+                    <stringProp name="812172277">${ER_code}</stringProp>
+                  </collectionProp>
+                  <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+                  <boolProp name="Assertion.assume_success">true</boolProp>
+                  <intProp name="Assertion.test_type">2</intProp>
+                  <stringProp name="Assertion.scope">all</stringProp>
+                </ResponseAssertion>
+                <hashTree/>
+                <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="CHECK: Despription" enabled="true">
+                  <collectionProp name="Asserion.test_strings">
+                    <stringProp name="-2054141755">${ER_answer1}</stringProp>
+                    <stringProp name="-2054141724">${ER_answer2}</stringProp>
+                  </collectionProp>
+                  <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                  <boolProp name="Assertion.assume_success">true</boolProp>
+                  <intProp name="Assertion.test_type">2</intProp>
+                  <stringProp name="Assertion.scope">all</stringProp>
+                </ResponseAssertion>
+                <hashTree/>
+              </hashTree>
+            </hashTree>
+            <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If PG-Error" enabled="true">
+              <stringProp name="IfController.condition">${__javaScript(&quot;${paymentOp}&quot; == &quot;pg-error&quot;)}</stringProp>
+              <boolProp name="IfController.evaluateAll">false</boolProp>
+            </IfController>
+            <hashTree>
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="- ${TC} - *** Payment PG Error ***" enabled="true">
+                <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+                <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                  <collectionProp name="Arguments.arguments">
+                    <elementProp name="" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                      <stringProp name="Argument.value">{&#xd;
+ &quot;userInfo&quot;: {&#xd;
+   &quot;endUserId&quot;: &quot;${endUserId}&quot;,&#xd;
+   &quot;operatorId&quot;: ${countryCode}${OBcode},&#xd;
+   &quot;paymentMethod&quot;: {&#xd;
+      &quot;type&quot;: &quot;directToBill&quot;&#xd;
+   }&#xd;
+ },&#xd;
+ &quot;vendorInfo&quot;: {&#xd;
+   &quot;merchantId&quot;: &quot;PDI&quot;,&#xd;
+   &quot;operatorId&quot;:  ${countryCode}${OBcode},&#xd;
+   &quot;callbackUrl&quot;: &quot;http://callback.tid.es&quot;&#xd;
+ },&#xd;
+ &quot;productInfo&quot;: {&#xd;
+   &quot;productId&quot;: &quot;${productId}&quot;,&#xd;
+   &quot;productClass&quot;: &quot;videoclip&quot;,&#xd;
+   &quot;amount&quot;: ${amount},&#xd;
+   &quot;currency&quot;: &quot;${currency}&quot;&#xd;
+ },&#xd;
+ &quot;operationInfo&quot;: {&#xd;
+   &quot;operationDescription&quot;: &quot;jmeter-payment-${TC}&quot;,&#xd;
+   &quot;authorizationEndpointURL&quot;: &quot;http://www.tid.es&quot;&#xd;
+ }&#xd;
+}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                    </elementProp>
+                  </collectionProp>
+                </elementProp>
+                <stringProp name="HTTPSampler.domain"></stringProp>
+                <stringProp name="HTTPSampler.port"></stringProp>
+                <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                <stringProp name="HTTPSampler.response_timeout"></stringProp>
+                <stringProp name="HTTPSampler.protocol"></stringProp>
+                <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+                <stringProp name="HTTPSampler.path">/payment/v2/payments</stringProp>
+                <stringProp name="HTTPSampler.method">POST</stringProp>
+                <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                <boolProp name="HTTPSampler.monitor">false</boolProp>
+                <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+                <stringProp name="TestPlan.comments">${endUserId}</stringProp>
+              </HTTPSamplerProxy>
+              <hashTree>
+                <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Extractor de Expresiones Regulares" enabled="true">
+                  <stringProp name="RegexExtractor.useHeaders">unescaped</stringProp>
+                  <stringProp name="RegexExtractor.refname">txId</stringProp>
+                  <stringProp name="RegexExtractor.regex">transactionId&quot;?:&quot;?([- A-Za-z0-9]+)</stringProp>
+                  <stringProp name="RegexExtractor.template">$1$</stringProp>
+                  <stringProp name="RegexExtractor.default">kk</stringProp>
+                  <stringProp name="RegexExtractor.match_number">1</stringProp>
+                </RegexExtractor>
+                <hashTree/>
+                <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="CHECK: Code" enabled="true">
+                  <collectionProp name="Asserion.test_strings">
+                    <stringProp name="812172277">${ER_code}</stringProp>
+                  </collectionProp>
+                  <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+                  <boolProp name="Assertion.assume_success">true</boolProp>
+                  <intProp name="Assertion.test_type">2</intProp>
+                  <stringProp name="Assertion.scope">all</stringProp>
+                </ResponseAssertion>
+                <hashTree/>
+                <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="CHECK: Despription" enabled="true">
+                  <collectionProp name="Asserion.test_strings">
+                    <stringProp name="-2054141755">${ER_answer1}</stringProp>
+                    <stringProp name="-2054141724">${ER_answer2}</stringProp>
+                  </collectionProp>
+                  <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                  <boolProp name="Assertion.assume_success">true</boolProp>
+                  <intProp name="Assertion.test_type">2</intProp>
+                  <stringProp name="Assertion.scope">all</stringProp>
+                </ResponseAssertion>
+                <hashTree/>
+              </hashTree>
+            </hashTree>
+          </hashTree>
+          <IfController guiclass="IfControllerPanel" testclass="IfController" testname="GTC-212 (Reset time limits)" enabled="true">
+            <stringProp name="IfController.condition">${__javaScript(&quot;${TC}&quot;==&quot;GTC-212&quot;)}</stringProp>
+            <boolProp name="IfController.evaluateAll">false</boolProp>
+          </IfController>
+          <hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="- ${TC} - *** Payment - ${amount} ${currency} ***" enabled="true">
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">{&#xd;
+ &quot;userInfo&quot;: {&#xd;
+   &quot;endUserId&quot;: &quot;${endUserId}&quot;,&#xd;
+   &quot;operatorId&quot;: ${countryCode}${OBcode},&#xd;
+   &quot;paymentMethod&quot;: {&#xd;
+      &quot;type&quot;: &quot;directToBill&quot;&#xd;
+   }&#xd;
+ },&#xd;
+ &quot;vendorInfo&quot;: {&#xd;
+   &quot;merchantId&quot;: &quot;PDI&quot;,&#xd;
+   &quot;operatorId&quot;:  ${countryCode}${OBcode},&#xd;
+   &quot;callbackUrl&quot;: &quot;http://callback.tid.es&quot;&#xd;
+ },&#xd;
+ &quot;productInfo&quot;: {&#xd;
+   &quot;productId&quot;: &quot;${productId}&quot;,&#xd;
+   &quot;productClass&quot;: &quot;videoclip&quot;,&#xd;
+   &quot;amount&quot;: ${amount},&#xd;
+   &quot;currency&quot;: &quot;${currency}&quot;&#xd;
+ },&#xd;
+ &quot;operationInfo&quot;: {&#xd;
+   &quot;operationDescription&quot;: &quot;paymentOK-${TC}&quot;,&#xd;
+   &quot;authorizationEndpointURL&quot;: &quot;http://www.tid.es&quot;&#xd;
+ }&#xd;
+}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain"></stringProp>
+              <stringProp name="HTTPSampler.port"></stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+              <stringProp name="HTTPSampler.protocol"></stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">/payment/v2/payments</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <boolProp name="HTTPSampler.monitor">false</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              <stringProp name="TestPlan.comments">${endUserId}</stringProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Extractor de Expresiones Regulares" enabled="true">
+                <stringProp name="RegexExtractor.useHeaders">unescaped</stringProp>
+                <stringProp name="RegexExtractor.refname">txId</stringProp>
+                <stringProp name="RegexExtractor.regex">transactionId&quot;?:&quot;?([- A-Za-z0-9]+)</stringProp>
+                <stringProp name="RegexExtractor.template">$1$</stringProp>
+                <stringProp name="RegexExtractor.default">kk</stringProp>
+                <stringProp name="RegexExtractor.match_number">1</stringProp>
+              </RegexExtractor>
+              <hashTree/>
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="CHECK: Code" enabled="true">
+                <collectionProp name="Asserion.test_strings">
+                  <stringProp name="812172277">${ER_code}</stringProp>
+                </collectionProp>
+                <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+                <boolProp name="Assertion.assume_success">true</boolProp>
+                <intProp name="Assertion.test_type">2</intProp>
+                <stringProp name="Assertion.scope">all</stringProp>
+              </ResponseAssertion>
+              <hashTree/>
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="CHECK: Despription" enabled="true">
+                <collectionProp name="Asserion.test_strings">
+                  <stringProp name="-2054141755">${ER_answer1}</stringProp>
+                  <stringProp name="-2054141724">${ER_answer2}</stringProp>
+                </collectionProp>
+                <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                <boolProp name="Assertion.assume_success">true</boolProp>
+                <intProp name="Assertion.test_type">2</intProp>
+                <stringProp name="Assertion.scope">all</stringProp>
+              </ResponseAssertion>
+              <hashTree/>
+            </hashTree>
+            <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Temporizador Constante" enabled="true">
+              <stringProp name="ConstantTimer.delay">1000</stringProp>
+            </ConstantTimer>
+            <hashTree/>
+            <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="${TC} - *** Update Reset time ***" enabled="true">
+              <stringProp name="dataSource">pool</stringProp>
+              <stringProp name="queryType">Update Statement</stringProp>
+              <stringProp name="query">UPDATE ${database-user}.DBE_EXPEND_CONTROL SET DT_NEXT_PERIOD_START=sysdate WHERE TX_EL_TYPE=&apos;${ER_nextPeriod}&apos;</stringProp>
+              <stringProp name="queryArguments"></stringProp>
+              <stringProp name="queryArgumentsTypes"></stringProp>
+              <stringProp name="variableNames"></stringProp>
+              <stringProp name="resultVariable"></stringProp>
+              <stringProp name="queryTimeout"></stringProp>
+            </JDBCSampler>
+            <hashTree/>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="- ${TC} - *** Payment - ${amount} ${currency} ***" enabled="true">
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">{&#xd;
+ &quot;userInfo&quot;: {&#xd;
+   &quot;endUserId&quot;: &quot;${endUserId}&quot;,&#xd;
+   &quot;operatorId&quot;: ${countryCode}${OBcode},&#xd;
+   &quot;paymentMethod&quot;: {&#xd;
+      &quot;type&quot;: &quot;directToBill&quot;&#xd;
+   }&#xd;
+ },&#xd;
+ &quot;vendorInfo&quot;: {&#xd;
+   &quot;merchantId&quot;: &quot;PDI&quot;,&#xd;
+   &quot;operatorId&quot;:  ${countryCode}${OBcode},&#xd;
+   &quot;callbackUrl&quot;: &quot;http://callback.tid.es&quot;&#xd;
+ },&#xd;
+ &quot;productInfo&quot;: {&#xd;
+   &quot;productId&quot;: &quot;${productId}&quot;,&#xd;
+   &quot;productClass&quot;: &quot;videoclip&quot;,&#xd;
+   &quot;amount&quot;: ${amount},&#xd;
+   &quot;currency&quot;: &quot;${currency}&quot;&#xd;
+ },&#xd;
+ &quot;operationInfo&quot;: {&#xd;
+   &quot;operationDescription&quot;: &quot;paymentOK-${TC}&quot;,&#xd;
+   &quot;authorizationEndpointURL&quot;: &quot;http://www.tid.es&quot;&#xd;
+ }&#xd;
+}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain"></stringProp>
+              <stringProp name="HTTPSampler.port"></stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+              <stringProp name="HTTPSampler.protocol"></stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">/payment/v2/payments</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <boolProp name="HTTPSampler.monitor">false</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              <stringProp name="TestPlan.comments">${endUserId}</stringProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Extractor de Expresiones Regulares" enabled="true">
+                <stringProp name="RegexExtractor.useHeaders">unescaped</stringProp>
+                <stringProp name="RegexExtractor.refname">txId</stringProp>
+                <stringProp name="RegexExtractor.regex">transactionId&quot;?:&quot;?([- A-Za-z0-9]+)</stringProp>
+                <stringProp name="RegexExtractor.template">$1$</stringProp>
+                <stringProp name="RegexExtractor.default">kk</stringProp>
+                <stringProp name="RegexExtractor.match_number">1</stringProp>
+              </RegexExtractor>
+              <hashTree/>
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="CHECK: Code" enabled="true">
+                <collectionProp name="Asserion.test_strings">
+                  <stringProp name="812172277">${ER_code}</stringProp>
+                </collectionProp>
+                <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+                <boolProp name="Assertion.assume_success">true</boolProp>
+                <intProp name="Assertion.test_type">2</intProp>
+                <stringProp name="Assertion.scope">all</stringProp>
+              </ResponseAssertion>
+              <hashTree/>
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="CHECK: Despription" enabled="true">
+                <collectionProp name="Asserion.test_strings">
+                  <stringProp name="-2054141755">${ER_answer1}</stringProp>
+                  <stringProp name="-2054141724">${ER_answer2}</stringProp>
+                </collectionProp>
+                <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                <boolProp name="Assertion.assume_success">true</boolProp>
+                <intProp name="Assertion.test_type">2</intProp>
+                <stringProp name="Assertion.scope">all</stringProp>
+              </ResponseAssertion>
+              <hashTree/>
+            </hashTree>
+          </hashTree>
+          <IfController guiclass="IfControllerPanel" testclass="IfController" testname="GTC-1510 (gross-tax)" enabled="true">
+            <stringProp name="IfController.condition">${__javaScript(&quot;${TC}&quot;==&quot;GTC-1510&quot;)}</stringProp>
+            <boolProp name="IfController.evaluateAll">false</boolProp>
+          </IfController>
+          <hashTree>
+            <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Payment" enabled="true">
+              <stringProp name="IfController.condition">${__javaScript(&quot;${paymentOp}&quot; == &quot;payment&quot;)}</stringProp>
+              <boolProp name="IfController.evaluateAll">false</boolProp>
+            </IfController>
+            <hashTree>
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="- ${TC} - *** Payment - ${amount} ${currency} ***" enabled="true">
+                <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+                <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                  <collectionProp name="Arguments.arguments">
+                    <elementProp name="" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                      <stringProp name="Argument.value">{&#xd;
+ &quot;userInfo&quot;: {&#xd;
+   &quot;endUserId&quot;: &quot;${endUserId}&quot;,&#xd;
+   &quot;operatorId&quot;: ${countryCode}${OBcode},&#xd;
+   &quot;paymentMethod&quot;: {&#xd;
+      &quot;type&quot;: &quot;directToBill&quot;&#xd;
+   }&#xd;
+ },&#xd;
+ &quot;vendorInfo&quot;: {&#xd;
+   &quot;merchantId&quot;: &quot;PDI&quot;,&#xd;
+   &quot;operatorId&quot;:  ${countryCode}${OBcode},&#xd;
+   &quot;callbackUrl&quot;: &quot;http://callback.tid.es&quot;&#xd;
+ },&#xd;
+ &quot;productInfo&quot;: {&#xd;
+   &quot;productId&quot;: &quot;${productId}&quot;,&#xd;
+   &quot;productClass&quot;: &quot;videoclip&quot;,&#xd;
+   &quot;amount&quot;: ${amount},&#xd;
+   &quot;taxAmount&quot;: ${taxAmount},&#xd;
+   &quot;currency&quot;: &quot;${currency}&quot;&#xd;
+ },&#xd;
+ &quot;operationInfo&quot;: {&#xd;
+   &quot;operationDescription&quot;: &quot;paymentOK-${TC}&quot;,&#xd;
+   &quot;authorizationEndpointURL&quot;: &quot;http://www.tid.es&quot;&#xd;
+ }&#xd;
+}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                    </elementProp>
+                  </collectionProp>
+                </elementProp>
+                <stringProp name="HTTPSampler.domain"></stringProp>
+                <stringProp name="HTTPSampler.port"></stringProp>
+                <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                <stringProp name="HTTPSampler.response_timeout"></stringProp>
+                <stringProp name="HTTPSampler.protocol"></stringProp>
+                <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+                <stringProp name="HTTPSampler.path">/payment/v2/payments</stringProp>
+                <stringProp name="HTTPSampler.method">POST</stringProp>
+                <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                <boolProp name="HTTPSampler.monitor">false</boolProp>
+                <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+                <stringProp name="TestPlan.comments">${endUserId}</stringProp>
+              </HTTPSamplerProxy>
+              <hashTree>
+                <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Extractor de Expresiones Regulares" enabled="true">
+                  <stringProp name="RegexExtractor.useHeaders">unescaped</stringProp>
+                  <stringProp name="RegexExtractor.refname">txId</stringProp>
+                  <stringProp name="RegexExtractor.regex">transactionId&quot;?:&quot;?([- A-Za-z0-9]+)</stringProp>
+                  <stringProp name="RegexExtractor.template">$1$</stringProp>
+                  <stringProp name="RegexExtractor.default">kk</stringProp>
+                  <stringProp name="RegexExtractor.match_number">1</stringProp>
+                </RegexExtractor>
+                <hashTree/>
+                <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="CHECK: Code" enabled="true">
+                  <collectionProp name="Asserion.test_strings">
+                    <stringProp name="812172277">${ER_code}</stringProp>
+                  </collectionProp>
+                  <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+                  <boolProp name="Assertion.assume_success">true</boolProp>
+                  <intProp name="Assertion.test_type">2</intProp>
+                  <stringProp name="Assertion.scope">all</stringProp>
+                </ResponseAssertion>
+                <hashTree/>
+                <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="CHECK: Despription" enabled="true">
+                  <collectionProp name="Asserion.test_strings">
+                    <stringProp name="-2054141755">${ER_answer1}</stringProp>
+                    <stringProp name="-2054141724">${ER_answer2}</stringProp>
+                  </collectionProp>
+                  <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                  <boolProp name="Assertion.assume_success">true</boolProp>
+                  <intProp name="Assertion.test_type">2</intProp>
+                  <stringProp name="Assertion.scope">all</stringProp>
+                </ResponseAssertion>
+                <hashTree/>
+              </hashTree>
+              <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="Update Test Status" enabled="true">
+                <stringProp name="BeanShellSampler.query">if(ctx.getPreviousResult().isSuccessful() == false) {
+  vars.put(&quot;jiraStatus&quot;, &quot;Fail&quot;);
+  jiraComment = vars.get(&quot;jiraComment&quot;) + &quot; -- Error in request &apos;&quot; + ctx.getPreviousSampler().getName() + &quot;&apos; -- &quot;;
+  vars.put(&quot;jiraComment&quot;, jiraComment);
+}</stringProp>
+                <stringProp name="BeanShellSampler.filename"></stringProp>
+                <stringProp name="BeanShellSampler.parameters"></stringProp>
+                <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+              </BeanShellSampler>
+              <hashTree/>
+            </hashTree>
+          </hashTree>
+          <IfController guiclass="IfControllerPanel" testclass="IfController" testname="GTC-1513 (gross-total)" enabled="true">
+            <stringProp name="IfController.condition">${__javaScript(&quot;${TC}&quot;==&quot;GTC-1513&quot;)}</stringProp>
+            <boolProp name="IfController.evaluateAll">false</boolProp>
+          </IfController>
+          <hashTree>
+            <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Payment" enabled="true">
+              <stringProp name="IfController.condition">${__javaScript(&quot;${paymentOp}&quot; == &quot;payment&quot;)}</stringProp>
+              <boolProp name="IfController.evaluateAll">false</boolProp>
+            </IfController>
+            <hashTree>
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="- ${TC} - *** Payment - ${amount} ${currency} ***" enabled="true">
+                <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+                <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                  <collectionProp name="Arguments.arguments">
+                    <elementProp name="" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                      <stringProp name="Argument.value">{&#xd;
+ &quot;userInfo&quot;: {&#xd;
+   &quot;endUserId&quot;: &quot;${endUserId}&quot;,&#xd;
+   &quot;operatorId&quot;: ${countryCode}${OBcode},&#xd;
+   &quot;paymentMethod&quot;: {&#xd;
+      &quot;type&quot;: &quot;directToBill&quot;&#xd;
+   }&#xd;
+ },&#xd;
+ &quot;vendorInfo&quot;: {&#xd;
+   &quot;merchantId&quot;: &quot;PDI&quot;,&#xd;
+   &quot;operatorId&quot;:  ${countryCode}${OBcode},&#xd;
+   &quot;callbackUrl&quot;: &quot;http://callback.tid.es&quot;&#xd;
+ },&#xd;
+ &quot;productInfo&quot;: {&#xd;
+   &quot;productId&quot;: &quot;${productId}&quot;,&#xd;
+   &quot;productClass&quot;: &quot;videoclip&quot;,&#xd;
+   &quot;totalAmount&quot;: ${totalAmount},&#xd;
+   &quot;currency&quot;: &quot;${currency}&quot;&#xd;
+ },&#xd;
+ &quot;operationInfo&quot;: {&#xd;
+   &quot;operationDescription&quot;: &quot;paymentOK-${TC}&quot;,&#xd;
+   &quot;authorizationEndpointURL&quot;: &quot;http://www.tid.es&quot;&#xd;
+ }&#xd;
+}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                    </elementProp>
+                  </collectionProp>
+                </elementProp>
+                <stringProp name="HTTPSampler.domain"></stringProp>
+                <stringProp name="HTTPSampler.port"></stringProp>
+                <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                <stringProp name="HTTPSampler.response_timeout"></stringProp>
+                <stringProp name="HTTPSampler.protocol"></stringProp>
+                <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+                <stringProp name="HTTPSampler.path">/payment/v2/payments</stringProp>
+                <stringProp name="HTTPSampler.method">POST</stringProp>
+                <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                <boolProp name="HTTPSampler.monitor">false</boolProp>
+                <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+                <stringProp name="TestPlan.comments">${endUserId}</stringProp>
+              </HTTPSamplerProxy>
+              <hashTree>
+                <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Extractor de Expresiones Regulares" enabled="true">
+                  <stringProp name="RegexExtractor.useHeaders">unescaped</stringProp>
+                  <stringProp name="RegexExtractor.refname">txId</stringProp>
+                  <stringProp name="RegexExtractor.regex">transactionId&quot;?:&quot;?([- A-Za-z0-9]+)</stringProp>
+                  <stringProp name="RegexExtractor.template">$1$</stringProp>
+                  <stringProp name="RegexExtractor.default">kk</stringProp>
+                  <stringProp name="RegexExtractor.match_number">1</stringProp>
+                </RegexExtractor>
+                <hashTree/>
+                <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="CHECK: Code" enabled="true">
+                  <collectionProp name="Asserion.test_strings">
+                    <stringProp name="812172277">${ER_code}</stringProp>
+                  </collectionProp>
+                  <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+                  <boolProp name="Assertion.assume_success">true</boolProp>
+                  <intProp name="Assertion.test_type">2</intProp>
+                  <stringProp name="Assertion.scope">all</stringProp>
+                </ResponseAssertion>
+                <hashTree/>
+                <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="CHECK: Despription" enabled="true">
+                  <collectionProp name="Asserion.test_strings">
+                    <stringProp name="-2054141755">${ER_answer1}</stringProp>
+                    <stringProp name="-2054141724">${ER_answer2}</stringProp>
+                  </collectionProp>
+                  <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                  <boolProp name="Assertion.assume_success">true</boolProp>
+                  <intProp name="Assertion.test_type">2</intProp>
+                  <stringProp name="Assertion.scope">all</stringProp>
+                </ResponseAssertion>
+                <hashTree/>
+              </hashTree>
+              <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="Update Test Status" enabled="true">
+                <stringProp name="BeanShellSampler.query">if(ctx.getPreviousResult().isSuccessful() == false) {
+  vars.put(&quot;jiraStatus&quot;, &quot;Fail&quot;);
+  jiraComment = vars.get(&quot;jiraComment&quot;) + &quot; -- Error in request &apos;&quot; + ctx.getPreviousSampler().getName() + &quot;&apos; -- &quot;;
+  vars.put(&quot;jiraComment&quot;, jiraComment);
+}</stringProp>
+                <stringProp name="BeanShellSampler.filename"></stringProp>
+                <stringProp name="BeanShellSampler.parameters"></stringProp>
+                <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+              </BeanShellSampler>
+              <hashTree/>
+            </hashTree>
+          </hashTree>
+          <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="Debug Environment ${TC}" enabled="true">
+            <boolProp name="displayJMeterProperties">false</boolProp>
+            <boolProp name="displayJMeterVariables">true</boolProp>
+            <boolProp name="displaySystemProperties">false</boolProp>
+          </DebugSampler>
+          <hashTree/>
+          <IfController guiclass="IfControllerPanel" testclass="IfController" testname="WHITE-BOX-DDBB" enabled="true">
+            <stringProp name="IfController.condition">${__javaScript(&quot;${whitebox-ddbb}&quot; == &quot;true&quot;)}</stringProp>
+            <boolProp name="IfController.evaluateAll">false</boolProp>
+          </IfController>
+          <hashTree>
+            <IfController guiclass="IfControllerPanel" testclass="IfController" testname="DDBB Check (If data is registered)" enabled="true">
+              <stringProp name="IfController.condition">${__javaScript(&quot;${ER_expensedAmount}&quot; != &quot;n/a&quot;)}</stringProp>
+              <boolProp name="IfController.evaluateAll">false</boolProp>
+              <stringProp name="TestPlan.comments"> For &quot;ELtype=perTransaction&quot; the ${ER_nextPeriod} won&apos;t be filled.</stringProp>
+            </IfController>
+            <hashTree>
+              <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="${TC} - *** DDBB Check (If data is registered) ***" enabled="true">
+                <stringProp name="dataSource">pool</stringProp>
+                <stringProp name="queryType">Select Statement</stringProp>
+                <stringProp name="query">SELECT FT_EXPENSED_AMOUNT,DT_NEXT_PERIOD_START FROM ${database-user}.DBE_EXPEND_CONTROL WHERE TX_END_USER_ID=&apos;${endUserId}&apos; AND NU_SERVICE_ID=${nuserviceId_1} AND TX_APPPROVIDER_ID=${appProviderId_1} AND TX_EL_TYPE=&apos;${ER_nextPeriod}&apos; </stringProp>
+                <stringProp name="queryArguments"></stringProp>
+                <stringProp name="queryArgumentsTypes"></stringProp>
+                <stringProp name="variableNames">FT_EXPENSED_AMOUNT,DT_NEXT_PERIOD_START</stringProp>
+                <stringProp name="resultVariable"></stringProp>
+                <stringProp name="queryTimeout"></stringProp>
+              </JDBCSampler>
+              <hashTree>
+                <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="CHECK: FT_EXPENSED_AMOUNT" enabled="true">
+                  <collectionProp name="Asserion.test_strings">
+                    <stringProp name="2070375642">${FT_EXPENSED_AMOUNT_1}</stringProp>
+                  </collectionProp>
+                  <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                  <boolProp name="Assertion.assume_success">true</boolProp>
+                  <intProp name="Assertion.test_type">1</intProp>
+                  <stringProp name="Assertion.scope">variable</stringProp>
+                  <stringProp name="Scope.variable">ER_expensedAmount</stringProp>
+                </ResponseAssertion>
+                <hashTree/>
+                <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="CHECK: DT_NEXT_PERIOD_START" enabled="true">
+                  <collectionProp name="Asserion.test_strings">
+                    <stringProp name="-667850605">${DT_NEXT_PERIOD_START_1}</stringProp>
+                  </collectionProp>
+                  <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                  <boolProp name="Assertion.assume_success">true</boolProp>
+                  <intProp name="Assertion.test_type">1</intProp>
+                  <stringProp name="Assertion.scope">variable</stringProp>
+                  <stringProp name="Scope.variable">sysdate</stringProp>
+                </ResponseAssertion>
+                <hashTree/>
+              </hashTree>
+            </hashTree>
+            <IfController guiclass="IfControllerPanel" testclass="IfController" testname="DDBB Check (If data is NOT registered)" enabled="true">
+              <stringProp name="IfController.condition">${__javaScript(&quot;${ER_expensedAmount}&quot; == &quot;n/a&quot;)}</stringProp>
+              <boolProp name="IfController.evaluateAll">false</boolProp>
+            </IfController>
+            <hashTree>
+              <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="${TC} - *** DDBB Check (If data is NOT registered) ***" enabled="true">
+                <stringProp name="dataSource">pool</stringProp>
+                <stringProp name="queryType">Select Statement</stringProp>
+                <stringProp name="query">SELECT FT_EXPENSED_AMOUNT,DT_NEXT_PERIOD_START FROM ${database-user}.DBE_EXPEND_CONTROL WHERE TX_END_USER_ID=&apos;${endUserId}&apos; AND NU_SERVICE_ID=${nuserviceId_1} AND TX_APPPROVIDER_ID=${appProviderId_1} AND TX_EL_TYPE=&apos;${ER_nextPeriod}&apos; </stringProp>
+                <stringProp name="queryArguments"></stringProp>
+                <stringProp name="queryArgumentsTypes"></stringProp>
+                <stringProp name="variableNames">FT_EXPENSED_AMOUNT,DT_NEXT_PERIOD_START</stringProp>
+                <stringProp name="resultVariable"></stringProp>
+                <stringProp name="queryTimeout"></stringProp>
+              </JDBCSampler>
+              <hashTree>
+                <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="CHECK: No FT_EXPENSED_AMOUNT is returned" enabled="true">
+                  <collectionProp name="Asserion.test_strings">
+                    <stringProp name="48">0</stringProp>
+                  </collectionProp>
+                  <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                  <boolProp name="Assertion.assume_success">true</boolProp>
+                  <intProp name="Assertion.test_type">1</intProp>
+                  <stringProp name="Assertion.scope">variable</stringProp>
+                  <stringProp name="Scope.variable">FT_EXPENSED_AMOUNT_#</stringProp>
+                </ResponseAssertion>
+                <hashTree/>
+              </hashTree>
+            </hashTree>
+            <IfController guiclass="IfControllerPanel" testclass="IfController" testname="Umbral Check (if exists)" enabled="true">
+              <stringProp name="IfController.condition">${__javaScript(&quot;${ER_notifications}&quot; != &quot;n/a&quot;)}</stringProp>
+              <boolProp name="IfController.evaluateAll">false</boolProp>
+            </IfController>
+            <hashTree>
+              <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="${TC} - *** DDBB Check (If Umbral exists) ***" enabled="true">
+                <stringProp name="dataSource">pool</stringProp>
+                <stringProp name="queryType">Select Statement</stringProp>
+                <stringProp name="query">SELECT TX_NOTIFICATIONS FROM ${database-user}.DBE_EXPEND_CONTROL WHERE TX_END_USER_ID=&apos;${endUserId}&apos; AND NU_SERVICE_ID=${nuserviceId_1} AND TX_APPPROVIDER_ID=${appProviderId_1} AND TX_EL_TYPE=&apos;${ER_nextPeriod}&apos; </stringProp>
+                <stringProp name="queryArguments"></stringProp>
+                <stringProp name="queryArgumentsTypes"></stringProp>
+                <stringProp name="variableNames">TX_NOTIFICATIONS</stringProp>
+                <stringProp name="resultVariable"></stringProp>
+                <stringProp name="queryTimeout"></stringProp>
+              </JDBCSampler>
+              <hashTree>
+                <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="[notification]" enabled="false">
+                  <stringProp name="filename"></stringProp>
+                  <stringProp name="parameters"></stringProp>
+                  <boolProp name="resetInterpreter">false</boolProp>
+                  <stringProp name="script">vars.put(&quot;ER_notifications_bars&quot;,&quot;[${ER_notifications}]&quot;);</stringProp>
+                </BeanShellPreProcessor>
+                <hashTree/>
+                <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="CHECK: TX_NOTIFICATIONS" enabled="true">
+                  <collectionProp name="Asserion.test_strings">
+                    <stringProp name="2111037287">${TX_NOTIFICATIONS_1}</stringProp>
+                  </collectionProp>
+                  <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                  <boolProp name="Assertion.assume_success">true</boolProp>
+                  <intProp name="Assertion.test_type">16</intProp>
+                  <stringProp name="Assertion.scope">variable</stringProp>
+                  <stringProp name="Scope.variable">ER_notifications</stringProp>
+                </ResponseAssertion>
+                <hashTree/>
+              </hashTree>
+            </hashTree>
+          </hashTree>
+          <IfController guiclass="IfControllerPanel" testclass="IfController" testname="WHITE-BOX-LOG" enabled="false">
+            <stringProp name="IfController.condition">${__javaScript(&quot;${whitebox-log}&quot; == &quot;true&quot;)}</stringProp>
+            <boolProp name="IfController.evaluateAll">false</boolProp>
+          </IfController>
+          <hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Generate LOG" enabled="true">
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+                <collectionProp name="Arguments.arguments"/>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain"></stringProp>
+              <stringProp name="HTTPSampler.port">${cgi-port}</stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+              <stringProp name="HTTPSampler.protocol"></stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">${cgi-path}</stringProp>
+              <stringProp name="HTTPSampler.method">GET</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <boolProp name="HTTPSampler.monitor">false</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Aserción de Respuesta" enabled="true">
+                <collectionProp name="Asserion.test_strings">
+                  <stringProp name="49586">200</stringProp>
+                </collectionProp>
+                <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+                <boolProp name="Assertion.assume_success">true</boolProp>
+                <intProp name="Assertion.test_type">2</intProp>
+              </ResponseAssertion>
+              <hashTree/>
+            </hashTree>
+            <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Temporizador Constante - 1sec" enabled="true">
+              <stringProp name="ConstantTimer.delay">1000</stringProp>
+            </ConstantTimer>
+            <hashTree/>
+            <IfController guiclass="IfControllerPanel" testclass="IfController" testname="Umbral Check (if exists)" enabled="true">
+              <stringProp name="IfController.condition">${__javaScript(&quot;${ER_notifications}&quot; != &quot;n/a&quot;)}</stringProp>
+              <boolProp name="IfController.evaluateAll">false</boolProp>
+            </IfController>
+            <hashTree>
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="${TC} - *** Check umbral in main.log ***" enabled="true">
+                <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+                  <collectionProp name="Arguments.arguments"/>
+                </elementProp>
+                <stringProp name="HTTPSampler.domain"></stringProp>
+                <stringProp name="HTTPSampler.port">${cgi-port}</stringProp>
+                <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                <stringProp name="HTTPSampler.response_timeout"></stringProp>
+                <stringProp name="HTTPSampler.protocol"></stringProp>
+                <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+                <stringProp name="HTTPSampler.path">${log-file}</stringProp>
+                <stringProp name="HTTPSampler.method">GET</stringProp>
+                <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                <boolProp name="HTTPSampler.monitor">false</boolProp>
+                <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              </HTTPSamplerProxy>
+              <hashTree>
+                <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Extractor de Expresiones Regulares" enabled="true">
+                  <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+                  <stringProp name="RegexExtractor.refname">maxLevel</stringProp>
+                  <stringProp name="RegexExtractor.regex">Notification limit (\d+.?(\d+)?) exceed for tx:${txId}</stringProp>
+                  <stringProp name="RegexExtractor.template">$1$</stringProp>
+                  <stringProp name="RegexExtractor.default">kk</stringProp>
+                  <stringProp name="RegexExtractor.match_number">1</stringProp>
+                </RegexExtractor>
+                <hashTree/>
+                <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="CHECK: Code" enabled="true">
+                  <collectionProp name="Asserion.test_strings">
+                    <stringProp name="49586">200</stringProp>
+                  </collectionProp>
+                  <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+                  <boolProp name="Assertion.assume_success">true</boolProp>
+                  <intProp name="Assertion.test_type">2</intProp>
+                </ResponseAssertion>
+                <hashTree/>
+                <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="CHECK: Log" enabled="true">
+                  <collectionProp name="Asserion.test_strings">
+                    <stringProp name="-470302096">${ER_notifications}</stringProp>
+                  </collectionProp>
+                  <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                  <boolProp name="Assertion.assume_success">true</boolProp>
+                  <intProp name="Assertion.test_type">1</intProp>
+                  <stringProp name="Assertion.scope">variable</stringProp>
+                  <stringProp name="Scope.variable">maxLevel</stringProp>
+                </ResponseAssertion>
+                <hashTree/>
+              </hashTree>
+            </hashTree>
+            <IfController guiclass="IfControllerPanel" testclass="IfController" testname="Limit Check (if reached)" enabled="true">
+              <stringProp name="IfController.condition">${__javaScript(&quot;${ER_answer1}&quot; == &quot;SVC3705&quot;)}</stringProp>
+              <boolProp name="IfController.evaluateAll">false</boolProp>
+            </IfController>
+            <hashTree>
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="${TC} - *** Check limit in main.log ***" enabled="true">
+                <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+                  <collectionProp name="Arguments.arguments"/>
+                </elementProp>
+                <stringProp name="HTTPSampler.domain"></stringProp>
+                <stringProp name="HTTPSampler.port">${cgi-port}</stringProp>
+                <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                <stringProp name="HTTPSampler.response_timeout"></stringProp>
+                <stringProp name="HTTPSampler.protocol"></stringProp>
+                <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+                <stringProp name="HTTPSampler.path">${log-file}</stringProp>
+                <stringProp name="HTTPSampler.method">GET</stringProp>
+                <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                <boolProp name="HTTPSampler.monitor">false</boolProp>
+                <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              </HTTPSamplerProxy>
+              <hashTree>
+                <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Extractor de Expresiones Regulares" enabled="true">
+                  <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+                  <stringProp name="RegexExtractor.refname">maxCredit</stringProp>
+                  <stringProp name="RegexExtractor.regex">Limit ${ER_nextPeriod} exceeded by transactionId:${txId}</stringProp>
+                  <stringProp name="RegexExtractor.template">$1$</stringProp>
+                  <stringProp name="RegexExtractor.default">kk</stringProp>
+                  <stringProp name="RegexExtractor.match_number">1</stringProp>
+                </RegexExtractor>
+                <hashTree/>
+                <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="CHECK: Code" enabled="true">
+                  <collectionProp name="Asserion.test_strings">
+                    <stringProp name="49586">200</stringProp>
+                  </collectionProp>
+                  <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+                  <boolProp name="Assertion.assume_success">true</boolProp>
+                  <intProp name="Assertion.test_type">2</intProp>
+                </ResponseAssertion>
+                <hashTree/>
+                <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="CHECK: Log" enabled="true">
+                  <collectionProp name="Asserion.test_strings">
+                    <stringProp name="3424">kk</stringProp>
+                  </collectionProp>
+                  <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                  <boolProp name="Assertion.assume_success">true</boolProp>
+                  <intProp name="Assertion.test_type">5</intProp>
+                  <stringProp name="Assertion.scope">variable</stringProp>
+                  <stringProp name="Scope.variable">maxCredit</stringProp>
+                  <stringProp name="TestPlan.comments">It can not be used variables from environment.csv</stringProp>
+                </ResponseAssertion>
+                <hashTree/>
+              </hashTree>
+            </hashTree>
+          </hashTree>
+          <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="Debug ${TC}" enabled="true">
+            <boolProp name="displayJMeterProperties">false</boolProp>
+            <boolProp name="displayJMeterVariables">true</boolProp>
+            <boolProp name="displaySystemProperties">false</boolProp>
+          </DebugSampler>
+          <hashTree/>
+        </hashTree>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="3. TearDown" enabled="true"/>
+        <hashTree>
+          <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="PROFILES - Clean" enabled="true">
+            <stringProp name="dataSource">pool</stringProp>
+            <stringProp name="queryType">Update Statement</stringProp>
+            <stringProp name="query">TRUNCATE TABLE DBE_EXPEND_LIMIT</stringProp>
+            <stringProp name="queryArguments"></stringProp>
+            <stringProp name="queryArgumentsTypes"></stringProp>
+            <stringProp name="variableNames"></stringProp>
+            <stringProp name="resultVariable"></stringProp>
+            <stringProp name="queryTimeout"></stringProp>
+          </JDBCSampler>
+          <hashTree/>
+          <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="PAYMENTS - Clean" enabled="true">
+            <stringProp name="dataSource">pool</stringProp>
+            <stringProp name="queryType">Update Statement</stringProp>
+            <stringProp name="query">TRUNCATE TABLE DBE_EXPEND_CONTROL</stringProp>
+            <stringProp name="queryArguments"></stringProp>
+            <stringProp name="queryArgumentsTypes"></stringProp>
+            <stringProp name="variableNames"></stringProp>
+            <stringProp name="resultVariable"></stringProp>
+            <stringProp name="queryTimeout"></stringProp>
+          </JDBCSampler>
+          <hashTree/>
+        </hashTree>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="Ver Árbol de Resultados" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>false</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>

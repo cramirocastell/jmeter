@@ -1,0 +1,5 @@
+payment|tel:+34600001133|214|07|BV|n/a|n/a|n/a|1.01|EUR|404|SVC3705|Insufficient payment method balance: Limit weekly exceeded|0|weekly|n/a|
+payment|tel:+34600001133|214|07|BV|n/a|n/a|n/a|0.91|EUR|201|Charged|paymentOK|0.75|weekly|n/a|
+payment|tel:+34600001133|214|07|BV|n/a|n/a|n/a|0.26|EUR|404|SVC3705|Insufficient payment method balance: Limit weekly exceeded|0.75|weekly|n/a|<EOF>
+
+IVA(PENINSULA Y BALEARES)","percentage":0.21

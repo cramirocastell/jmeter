@@ -1,0 +1,5 @@
+payment|tel:+34600000122|214|07|BV|n/a|1|0|n/a|EUR|201|Charged|paymentOK|1|daily|n/a|
+payment|tel:+34600000122|214|07|BV|n/a|9.01|0|n/a|EUR|404|SVC3705|Insufficient payment method balance: Limit daily exceeded|1|daily|n/a|
+payment|tel:+34600000122|214|07|BV|n/a|0.51|0|n/a|EUR|201|Charged|paymentOK|1.51|daily|n/a|<EOF>
+
+Reach Daily system Limit
